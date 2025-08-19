@@ -369,6 +369,14 @@ Discarded input sections
  .text          0x00000000        0x0 ./system/src/cmsis/vectors_stm32f401xc.o
  .data          0x00000000        0x0 ./system/src/cmsis/vectors_stm32f401xc.o
  .bss           0x00000000        0x0 ./system/src/cmsis/vectors_stm32f401xc.o
+ .text          0x00000000        0x0 ./src/MCAL/SYSCFG/SYSCFG_prg.o
+ .data          0x00000000        0x0 ./src/MCAL/SYSCFG/SYSCFG_prg.o
+ .bss           0x00000000        0x0 ./src/MCAL/SYSCFG/SYSCFG_prg.o
+ .debug_line    0x00000000        0x0 ./src/MCAL/SYSCFG/SYSCFG_prg.o
+ .debug_str     0x00000000      0x11c ./src/MCAL/SYSCFG/SYSCFG_prg.o
+ .comment       0x00000000       0x7f ./src/MCAL/SYSCFG/SYSCFG_prg.o
+ .ARM.attributes
+                0x00000000       0x33 ./src/MCAL/SYSCFG/SYSCFG_prg.o
  .text          0x00000000        0x0 ./src/MCAL/RCC/RCC_prg.o
  .data          0x00000000        0x0 ./src/MCAL/RCC/RCC_prg.o
  .bss           0x00000000        0x0 ./src/MCAL/RCC/RCC_prg.o
@@ -377,18 +385,43 @@ Discarded input sections
  .text          0x00000000        0x0 ./src/MCAL/NVIC/NVIC_prg.o
  .data          0x00000000        0x0 ./src/MCAL/NVIC/NVIC_prg.o
  .bss           0x00000000        0x0 ./src/MCAL/NVIC/NVIC_prg.o
- .debug_info    0x00000000       0x5d ./src/MCAL/NVIC/NVIC_prg.o
- .debug_abbrev  0x00000000       0x1b ./src/MCAL/NVIC/NVIC_prg.o
- .debug_aranges
+ .text.NVIC_EnableIRQ
+                0x00000000       0x1a ./src/MCAL/NVIC/NVIC_prg.o
+ .text.NVIC_DisableIRQ
+                0x00000000       0x1e ./src/MCAL/NVIC/NVIC_prg.o
+ .text.NVIC_SetPendingIRQ
+                0x00000000       0x1e ./src/MCAL/NVIC/NVIC_prg.o
+ .text.NVIC_ClearPendingIRQ
+                0x00000000       0x1e ./src/MCAL/NVIC/NVIC_prg.o
+ .text.NVIC_GetPendingIRQ
                 0x00000000       0x18 ./src/MCAL/NVIC/NVIC_prg.o
- .debug_line    0x00000000       0x1d ./src/MCAL/NVIC/NVIC_prg.o
- .debug_str     0x00000000      0x184 ./src/MCAL/NVIC/NVIC_prg.o
+ .text.NVIC_SetPriority
+                0x00000000       0x10 ./src/MCAL/NVIC/NVIC_prg.o
+ .text.NVIC_GetPriority
+                0x00000000        0xe ./src/MCAL/NVIC/NVIC_prg.o
+ .debug_info    0x00000000      0x43a ./src/MCAL/NVIC/NVIC_prg.o
+ .debug_abbrev  0x00000000      0x10e ./src/MCAL/NVIC/NVIC_prg.o
+ .debug_loc     0x00000000      0x108 ./src/MCAL/NVIC/NVIC_prg.o
+ .debug_aranges
+                0x00000000       0x50 ./src/MCAL/NVIC/NVIC_prg.o
+ .debug_ranges  0x00000000       0x40 ./src/MCAL/NVIC/NVIC_prg.o
+ .debug_line    0x00000000       0xf9 ./src/MCAL/NVIC/NVIC_prg.o
+ .debug_str     0x00000000      0x61b ./src/MCAL/NVIC/NVIC_prg.o
  .comment       0x00000000       0x7f ./src/MCAL/NVIC/NVIC_prg.o
+ .debug_frame   0x00000000       0x80 ./src/MCAL/NVIC/NVIC_prg.o
  .ARM.attributes
                 0x00000000       0x33 ./src/MCAL/NVIC/NVIC_prg.o
  .text          0x00000000        0x0 ./src/MCAL/GPIO/GPIO_prg.o
  .data          0x00000000        0x0 ./src/MCAL/GPIO/GPIO_prg.o
  .bss           0x00000000        0x0 ./src/MCAL/GPIO/GPIO_prg.o
+ .text          0x00000000        0x0 ./src/MCAL/EXTI/EXTI_prg.o
+ .data          0x00000000        0x0 ./src/MCAL/EXTI/EXTI_prg.o
+ .bss           0x00000000        0x0 ./src/MCAL/EXTI/EXTI_prg.o
+ .debug_line    0x00000000        0x0 ./src/MCAL/EXTI/EXTI_prg.o
+ .debug_str     0x00000000      0x118 ./src/MCAL/EXTI/EXTI_prg.o
+ .comment       0x00000000       0x7f ./src/MCAL/EXTI/EXTI_prg.o
+ .ARM.attributes
+                0x00000000       0x33 ./src/MCAL/EXTI/EXTI_prg.o
  .text          0x00000000        0x0 ./src/LIB/Delay/Delay_prg.o
  .data          0x00000000        0x0 ./src/LIB/Delay/Delay_prg.o
  .bss           0x00000000        0x0 ./src/LIB/Delay/Delay_prg.o
@@ -509,9 +542,11 @@ LOAD ./system/src/cortexm/_reset_hardware.o
 LOAD ./system/src/cortexm/exception_handlers.o
 LOAD ./system/src/cmsis/system_stm32f4xx.o
 LOAD ./system/src/cmsis/vectors_stm32f401xc.o
+LOAD ./src/MCAL/SYSCFG/SYSCFG_prg.o
 LOAD ./src/MCAL/RCC/RCC_prg.o
 LOAD ./src/MCAL/NVIC/NVIC_prg.o
 LOAD ./src/MCAL/GPIO/GPIO_prg.o
+LOAD ./src/MCAL/EXTI/EXTI_prg.o
 LOAD ./src/LIB/Delay/Delay_prg.o
 LOAD ./src/HAL/Seven_Segment/Seven_Segment_prg.o
 LOAD ./src/HAL/RGB_LED/RGB_prg.o

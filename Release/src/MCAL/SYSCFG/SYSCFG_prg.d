@@ -1,0 +1,1 @@
+src/MCAL/SYSCFG/SYSCFG_prg.o: ../src/MCAL/SYSCFG/SYSCFG_prg.c
