@@ -12,6 +12,8 @@
 
 #define NVIC_BASE_ADDR 0xE000E100U
 
+
+
 /* -------------------- NVIC Registers -------------------- */
 typedef struct{
 	u32 ISER[8];
@@ -26,6 +28,7 @@ typedef struct{
 	u32 RESERVED4[644];
 	u32 STIR;
 }NVIC_MemMap_t;
+
 
 #define NVIC   ((volatile NVIC_MemMap_t*) NVIC_BASE_ADDR)
 
