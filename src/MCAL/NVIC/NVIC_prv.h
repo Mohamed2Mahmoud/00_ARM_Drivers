@@ -26,8 +26,8 @@ typedef struct{
 	u32 RESERVED3[24];
 	u32 IABR[8];
 	u32 RESERVED4[56];
-	u8 IPR[240];
-	u32 RESERVED5[644];
+	u32 IPR[60];
+	u32 RESERVED5[580];
 	u32 STIR;
 }NVIC_MemMap_t;
 

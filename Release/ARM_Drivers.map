@@ -398,8 +398,8 @@ Discarded input sections
  .text.NVIC_SetPriority
                 0x00000000       0x10 ./src/MCAL/NVIC/NVIC_prg.o
  .text.NVIC_GetPriority
-                0x00000000        0xe ./src/MCAL/NVIC/NVIC_prg.o
- .debug_info    0x00000000      0x43a ./src/MCAL/NVIC/NVIC_prg.o
+                0x00000000       0x10 ./src/MCAL/NVIC/NVIC_prg.o
+ .debug_info    0x00000000      0x430 ./src/MCAL/NVIC/NVIC_prg.o
  .debug_abbrev  0x00000000      0x10e ./src/MCAL/NVIC/NVIC_prg.o
  .debug_loc     0x00000000      0x108 ./src/MCAL/NVIC/NVIC_prg.o
  .debug_aranges
@@ -417,9 +417,38 @@ Discarded input sections
  .text          0x00000000        0x0 ./src/MCAL/EXTI/EXTI_prg.o
  .data          0x00000000        0x0 ./src/MCAL/EXTI/EXTI_prg.o
  .bss           0x00000000        0x0 ./src/MCAL/EXTI/EXTI_prg.o
- .debug_line    0x00000000        0x0 ./src/MCAL/EXTI/EXTI_prg.o
- .debug_str     0x00000000      0x118 ./src/MCAL/EXTI/EXTI_prg.o
+ .text.EXTI_EnableInterrupt
+                0x00000000       0x14 ./src/MCAL/EXTI/EXTI_prg.o
+ .text.EXTI_DisableInterrupt
+                0x00000000       0x18 ./src/MCAL/EXTI/EXTI_prg.o
+ .text.EXTI_EnableEvent
+                0x00000000       0x14 ./src/MCAL/EXTI/EXTI_prg.o
+ .text.EXTI_DisableEvent
+                0x00000000       0x18 ./src/MCAL/EXTI/EXTI_prg.o
+ .text.EXTI_EnableRisingTrigger
+                0x00000000       0x14 ./src/MCAL/EXTI/EXTI_prg.o
+ .text.EXTI_EnableFallingTrigger
+                0x00000000       0x14 ./src/MCAL/EXTI/EXTI_prg.o
+ .text.EXTI_DisableRisingTrigger
+                0x00000000       0x18 ./src/MCAL/EXTI/EXTI_prg.o
+ .text.EXTI_DisableFallingTrigger
+                0x00000000       0x18 ./src/MCAL/EXTI/EXTI_prg.o
+ .text.EXTI_GenerateSWInterrupt
+                0x00000000       0x14 ./src/MCAL/EXTI/EXTI_prg.o
+ .text.EXTI_ClearPending
+                0x00000000       0x14 ./src/MCAL/EXTI/EXTI_prg.o
+ .text.EXTI_GetPending
+                0x00000000       0x14 ./src/MCAL/EXTI/EXTI_prg.o
+ .debug_info    0x00000000      0x265 ./src/MCAL/EXTI/EXTI_prg.o
+ .debug_abbrev  0x00000000       0xc1 ./src/MCAL/EXTI/EXTI_prg.o
+ .debug_loc     0x00000000      0x16b ./src/MCAL/EXTI/EXTI_prg.o
+ .debug_aranges
+                0x00000000       0x70 ./src/MCAL/EXTI/EXTI_prg.o
+ .debug_ranges  0x00000000       0x60 ./src/MCAL/EXTI/EXTI_prg.o
+ .debug_line    0x00000000      0x12f ./src/MCAL/EXTI/EXTI_prg.o
+ .debug_str     0x00000000      0x28b ./src/MCAL/EXTI/EXTI_prg.o
  .comment       0x00000000       0x7f ./src/MCAL/EXTI/EXTI_prg.o
+ .debug_frame   0x00000000       0xc0 ./src/MCAL/EXTI/EXTI_prg.o
  .ARM.attributes
                 0x00000000       0x33 ./src/MCAL/EXTI/EXTI_prg.o
  .text          0x00000000        0x0 ./src/LIB/Delay/Delay_prg.o
