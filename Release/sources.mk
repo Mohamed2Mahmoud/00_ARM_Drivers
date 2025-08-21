@@ -29,6 +29,7 @@ CPP_DEPS :=
 SUBDIRS := \
 src/APP \
 src/HAL/Button \
+src/HAL/LEDMATRIX \
 src/HAL/RGB_LED \
 src/HAL/Seven_Segment \
 src/LIB/Delay \
@@ -37,6 +38,7 @@ src/MCAL/GPIO \
 src/MCAL/NVIC \
 src/MCAL/RCC \
 src/MCAL/SYSCFG \
+src/MCAL/SYSTICK \
 src \
 system/src/cmsis \
 system/src/cortexm \

@@ -19,6 +19,10 @@
 #include "../MCAL/NVIC/NVIC_int.h"
 #include "../MCAL/SYSCFG/SYSCFG_int.h"
 #include "../HAL/Seven_Segment/Seven_Segment_int.h"
+#include "../MCAL/SYSTICK/SYSTICK_int.h"
+
+#include "../HAL/LEDMATRIX/LEDMATRIX_int.h"
+#include "../HAL/LEDMATRIX/LEDMATRIX_cfg.h"
 
 
 #endif /* APP_INCLUDES_INT_H_ */

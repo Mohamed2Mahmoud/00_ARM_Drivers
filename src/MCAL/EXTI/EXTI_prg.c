@@ -127,3 +127,7 @@ void EXTI9_5IRQHandler(void)
 	}
 
 }
+
+void MEXTI_vClearPendingFlag(u8 A_u8LineNo){
+	EXTI->PR |= (1 << A_u8LineNo);
+}
