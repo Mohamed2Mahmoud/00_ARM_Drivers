@@ -1,38 +1,39 @@
 /*
  * NVIC_prv.h
  *
- *  Created on: Aug 18, 2025
- *      Author: drago
+ *  Created on: Aug 19, 2025
+ *      Author: Nada Mamdouh
+ *      Version: 0.0
  */
 
 #ifndef MCAL_NVIC_NVIC_PRV_H_
 #define MCAL_NVIC_NVIC_PRV_H_
 
-#include "../../LIB/STD_TYPES.h"
 
-#define NVIC_BASE_ADDR 0xE000E100U
+#define NVIC_BASE_ADDR		0xE000E100U
 
-
-
-/* -------------------- NVIC Registers -------------------- */
 typedef struct{
-	u32 ISER[8];
-	u32 RESERVED0[24];
-	u32 ICER[8];
-	u32 RESERVED1[24];
-	u32 ISPR[8];
-	u32 RESERVED2[24];
-	u32 ICPR[8];
-	u32 RESERVED3[24];
-	u32 IABR[8];
-	u32 RESERVED4[56];
-	u32 IPR[60];
-	u32 RESERVED5[580];
+	u32 ISERx[8];
+	u32 Reserved0[24];
+	u32 ICERx[8];
+	u32 Reserved1[24];
+	u32 ISPRx[8];
+	u32 Reserved2[24];
+	u32 ICPRx[8];
+	u32 Reserved3[24];
+	u32 IABRx[8];
+	u32 Reserved4[56];
+	u8  IPRx[240];
+	u32 Reserved5[580];
 	u32 STIR;
+
 }NVIC_MemMap_t;
 
 
-#define NVIC   ((volatile NVIC_MemMap_t*) NVIC_BASE_ADDR)
+#define NVIC 		     ((volatile NVIC_MemMap_t*)(NVIC_BASE_ADDR))
 
+#define SCB_AIRCR		*((volatile u32*)(0xE000ED0C))
+
+#define VECTKEY	          0x05FA0000
 
 #endif /* MCAL_NVIC_NVIC_PRV_H_ */

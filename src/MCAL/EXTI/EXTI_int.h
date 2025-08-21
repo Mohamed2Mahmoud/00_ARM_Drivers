@@ -1,29 +1,49 @@
 /*
  * EXTI_int.h
  *
- *  Created on: Aug 19, 2025
- *      Author: Koshok
+ *  Created on: Aug 20, 2025
+ *      Author: Nada Mamdouh
+ *      Version: 0.0
  */
 
-#ifndef MCAL_EXTI_EXTI_INT_H_
-#define MCAL_EXTI_EXTI_INT_H_
+#ifndef SRC_MCAL_EXTI_EXTI_INT_H_
+#define SRC_MCAL_EXTI_EXTI_INT_H_
 
-#include "../../LIB/STD_TYPES.h"
+typedef struct
+{
+	u8 LineNo;
+	u8 Trigger_t;
+}EXTI_Cng_t;
 
-void EXTI_EnableInterrupt(u8 line);
-void EXTI_DisableInterrupt(u8 line);
+void MEXTI_vInit(EXTI_Cng_t* A_xCfg);
+void MEXTI_vEnableINT(u8 A_u8LineNo, u8 A_u8Trigger_t);
+void MEXTI_vDisableINT(u8 A_u8LineNo);
+void MEXTI_vSetTrigger(u8 A_u8LineNo, u8 A_u8Trigger_t);
+void MEXTI_vSoftwareINT (u8 A_u8LineNo);
+void MEXTI_vSetCallBack(void(*A_xFptr)(void), u8 A_u8LineNo);
 
-void EXTI_EnableEvent(u8 line);
-void EXTI_DisableEvent(u8 line);
+/* Line Number == Pin number in any port */
+#define EXTI_LINE0		0
+#define EXTI_LINE1		1
+#define EXTI_LINE2		2
+#define EXTI_LINE3		3
+#define EXTI_LINE4		4
+#define EXTI_LINE5		5
+#define EXTI_LINE6		6
+#define EXTI_LINE7		7
+#define EXTI_LINE8		8
+#define EXTI_LINE9		9
+#define EXTI_LINE10		10
+#define EXTI_LINE11		11
+#define EXTI_LINE12		12
+#define EXTI_LINE13		13
+#define EXTI_LINE14		14
+#define EXTI_LINE15		15
 
-void EXTI_EnableRisingTrigger(u8 line);
-void EXTI_EnableFallingTrigger(u8 line);
-void EXTI_DisableRisingTrigger(u8 line);
-void EXTI_DisableFallingTrigger(u8 line);
+/* Trigger Type */
+#define	EXTI_RISING_EDGE	0
+#define EXTI_FALLING_EDGE	1
+#define EXTI_ONCHANGE_EDGE 	2
 
-void EXTI_GenerateSWInterrupt(u8 line);
 
-void EXTI_ClearPending(u8 line);
-u8   EXTI_GetPending(u8 line);
-
-#endif /* MCAL_EXTI_EXTI_INT_H_ */
+#endif /* SRC_MCAL_EXTI_EXTI_INT_H_ */

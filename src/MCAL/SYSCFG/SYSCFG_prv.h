@@ -1,25 +1,25 @@
 /*
  * SYSCFG_prv.h
  *
- *  Created on: Aug 19, 2025
- *      Author: Koshok
+ *  Created on: Aug 20, 2025
+ *      Author: Nada Mamdouh
+ *      Version: 0.0
  */
-#include "../../LIB/STD_TYPES.h"
 
-#ifndef MCAL_SYSCFG_SYSCFG_PRV_H_
-#define MCAL_SYSCFG_SYSCFG_PRV_H_
+#ifndef SRC_MCAL_SYSCFG_SYSCFG_PRV_H_
+#define SRC_MCAL_SYSCFG_SYSCFG_PRV_H_
 
-#define SYSCFG_BASE_ADDR 0x40013800U
+
+
+#define SYSCFG_BASE_ADDR		0x40013800U
 
 typedef struct{
-	u32 IMR;
-	u32 EMR;
-	u32 RTSR;
-	u32 FTSR;
-	u32 SWIER;
-	u32 PR;
+	u32 MEMRMP;
+	u32 PMC;
+	u32 EXTICRx[4];
+	u32 CMPCR;
 }SYSCFG_MemMap_t;
 
-#define SYSCFG   ((volatile SYSCFG_MemMap_t*) SYSCFG_BASE_ADDR)
+#define SYSCFG		((volatile SYSCFG_MemMap_t*)(SYSCFG_BASE_ADDR))
 
-#endif /* MCAL_SYSCFG_SYSCFG_PRV_H_ */
+#endif /* SRC_MCAL_SYSCFG_SYSCFG_PRV_H_ */
