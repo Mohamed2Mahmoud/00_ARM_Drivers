@@ -15,6 +15,10 @@
 #include "../HAL/Button/BTN_int.h"
 #include "../HAL/RGB_LED/RGB_int.h"
 #include "../LIB/Delay/Delay_int.h"
+#include "../MCAL/EXTI/EXTI_int.h"
+#include "../MCAL/NVIC/NVIC_int.h"
+#include "../MCAL/SYSCFG/SYSCFG_int.h"
+#include "../HAL/Seven_Segment/Seven_Segment_int.h"
 
 
 #endif /* APP_INCLUDES_INT_H_ */

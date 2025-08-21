@@ -1,63 +1,73 @@
 #include "Includes_int.h"
 
+
+volatile s8 counter = 0;
+
+void IncrementBtn_Handler(void)
+{
+    counter++;
+    if (counter > 9) counter = 0;
+}
+
+void DecrementBtn_Handler(void)
+{
+    counter--;
+    if (counter < 0) counter = 9;
+}
+
+// ------------ MAIN ------------
 int main(void)
 {
-    /* ------------------- System Init ------------------- */
+    /* --- System Init --- */
     MRCC_vInit();
     MRCC_vEnableClk(RCC_AHB1, RCC_GPIOA);
+    MRCC_vEnableClk(RCC_AHB1, RCC_GPIOB);
 
-    /* ------------------- LED Pins ------------------- */
-    GPIOx_PinConfig_t ledPins[3] = {
-        {GPIO_PORTA, PIN0, GPIO_MODE_OUTPUT, GPIO_PUSHPULL, GPIO_LOW_SPEED, GPIO_NOPULL, 0},
-        {GPIO_PORTA, PIN1, GPIO_MODE_OUTPUT, GPIO_PUSHPULL, GPIO_LOW_SPEED, GPIO_NOPULL, 0},
-        {GPIO_PORTA, PIN2, GPIO_MODE_OUTPUT, GPIO_PUSHPULL, GPIO_LOW_SPEED, GPIO_NOPULL, 0}
+    Segment_Init_t SEG1 = {
+        .Port = GPIO_PORTB,
+        .PinNo = {PIN0, PIN1, PIN2, PIN5, PIN6, PIN7, PIN8, PIN9}
     };
 
-    for (u8 i = 0; i < 3; i++) {
-        MGPIO_vPinInit(&ledPins[i]);
-    }
 
-    /* ------------------- Button Pins ------------------- */
-    BTN_Init_t buttons[3] = {
-        {GPIO_PORTA, PIN3, GPIO_PULLDOWN},
-        {GPIO_PORTA, PIN4, GPIO_PULLDOWN},
-        {GPIO_PORTA, PIN5, GPIO_PULLDOWN}
+    _7_Segment_Init(&SEG1);
+        _7_Segment_Write(&SEG1, counter);
+
+
+    GPIOx_PinConfig_t btn1 = {
+        .port = GPIO_PORTA,
+        .pin = PIN0,
+        .mode = GPIO_MODE_INPUT,
+        .outputType = GPIO_PUSHPULL,
+        .speed = GPIO_LOW_SPEED,
+        .pull = GPIO_PULLUP,
+        .altFunc = 0
     };
 
-    for (u8 i = 0; i < 3; i++) {
-        BTN_Init(&buttons[i]);
-    }
+    MGPIO_vPinInit(&btn1);
 
-    /* ------------------- Button Flags ------------------- */
-    u8 btnFlags[3] = {0, 0, 0};
+    GPIOx_PinConfig_t btn2 = {
+        .port = GPIO_PORTA,
+        .pin = PIN1,
+        .mode = GPIO_MODE_INPUT,
+        .outputType = GPIO_PUSHPULL,
+        .speed = GPIO_LOW_SPEED,
+        .pull = GPIO_PULLUP,
+        .altFunc = 0
+    };
+    MGPIO_vPinInit(&btn2);
 
-    /* ------------------- Main Loop ------------------- */
+    MEXTI_vEnableINT(EXTI_LINE0, EXTI_FALLING_EDGE);
+	MEXTI_vSetCallBack(IncrementBtn_Handler, EXTI_LINE0);
+	MNVIC_vEnable_Peripheral_INT(6);
+
+	MEXTI_vEnableINT(EXTI_LINE1, EXTI_FALLING_EDGE);
+	MEXTI_vSetCallBack(DecrementBtn_Handler, EXTI_LINE1);
+	MNVIC_vEnable_Peripheral_INT(7);
+
+
     while (1)
     {
-        if (BTN_State(&buttons[0]) == 1) {
-            btnFlags[0] ^= 1;
-            DELAY_ms(200);
-        }
-        else if (BTN_State(&buttons[1]) == 1) {
-            btnFlags[1] ^= 1;
-            DELAY_ms(200);
-        }
-        else if (BTN_State(&buttons[2]) == 1) {
-            btnFlags[2] ^= 1;
-            DELAY_ms(200);
-        }
-        for (u8 i = 0; i < 3; i++) {
-            MGPIO_vSetPinValue(GPIO_PORTA, ledPins[i].pin, btnFlags[i] ? GPIO_HIGH : GPIO_LOW);
-        }
-
-        /* Example for RGB usage */
-        /*
-        RGB_Color(&rgbConfig, GPIO_HIGH, GPIO_LOW, GPIO_LOW);
-        DelayMs(500);
-        RGB_Color(&rgbConfig, GPIO_LOW, GPIO_HIGH, GPIO_HIGH);
-        DelayMs(500);
-        */
+    	_7_Segment_Write(&SEG1, counter);
     }
-
-    return 0;
+    return 0 ;
 }
