@@ -2,44 +2,50 @@
 #include "Includes_int.h"
 
 // auto increment every 2 sec
-volatile s8 counter = 0;
 
-void AutoIncrement_Handler(void)
-{
-    counter++;
-    if (counter > 9) counter = 0;
-}
+	int main(void)
+	{
+	    // Init RCC and GPIO clocks first
+	    MRCC_vInit();
+	    MRCC_vEnableClk(RCC_AHB1, RCC_GPIOA);
+	    MRCC_vEnableClk(RCC_AHB1, RCC_GPIOB);
 
-int main(void)
-{
-    MRCC_vInit();
-    MRCC_vEnableClk(RCC_AHB1, RCC_GPIOA);   // For buttons
-    MRCC_vEnableClk(RCC_AHB1, RCC_GPIOB);   // For 7-segment
-    MRCC_vEnableClk(RCC_APB2, RCC_SYSCFG);  // Enable SYSCFG clock for EXTI
+	    // Init the matrix
+	    HLEDMATRIX_vInit(&LEDMATRIX_cfg);
 
-    Segment_Init_t SEG1 = {
-        .Port = GPIO_PORTB,
-        .PinNo = {PIN0, PIN1, PIN2, PIN5, PIN6, PIN7, PIN8, PIN9}
-    };
-    _7_Segment_Init(&SEG1);
-    _7_Segment_Write(&SEG1, counter);
+	    // A simple pattern: diagonal line
+	    u8 frame1[8] = {
+	        0b10000000,
+	        0b01000000,
+	        0b00100000,
+	        0b00010000,
+	        0b00001000,
+	        0b00000100,
+	        0b00000010,
+	        0b00000001
+	    };
 
+	    // Another pattern: full square
+	    u8 frame2[8] = {
+	        0b11111111,
+	        0b10000001,
+	        0b10000001,
+	        0b10000001,
+	        0b10000001,
+	        0b10000001,
+	        0b10000001,
+	        0b11111111
+	    };
 
-    MSYSTICK_Config_t systickCfg = {
-        .InterruptEnable = INT_ENABLE,
-        .CLK_SRC = CLK_SRC_AHB_8
-    };
-    MSYSTICK_vInit(&systickCfg);
+	    while (1)
+	    {
+	        // Show diagonal for ~500ms
+	        HLEDMATRIX_DisplayFrame(frame1, 50);
 
-    MSYSTICK_vSetInterval_Multi(2000, AutoIncrement_Handler);
-
-    while (1)
-    {
-        _7_Segment_Write(&SEG1, counter);
-    }
-
-    return 0;
-}
+	        // Show square for ~500ms
+	        HLEDMATRIX_DisplayFrame(frame2, 50);
+	    }
+	}
 
 
 // btn Increment and decrment
@@ -152,48 +158,7 @@ int main(void)
 
 // led matrix main
 
-/*int main(void)
-{
-    // Init RCC and GPIO clocks first
-    MRCC_vInit();
-    MRCC_vEnableClk(RCC_AHB1, RCC_GPIOA);
-    MRCC_vEnableClk(RCC_AHB1, RCC_GPIOB);
 
-    // Init the matrix
-    HLEDMATRIX_vInit(&LEDMATRIX_cfg);
 
-    // A simple pattern: diagonal line
-    u8 frame1[8] = {
-        0b10000000,
-        0b01000000,
-        0b00100000,
-        0b00010000,
-        0b00001000,
-        0b00000100,
-        0b00000010,
-        0b00000001
-    };
-
-    // Another pattern: full square
-    u8 frame2[8] = {
-        0b11111111,
-        0b10000001,
-        0b10000001,
-        0b10000001,
-        0b10000001,
-        0b10000001,
-        0b10000001,
-        0b11111111
-    };
-
-    while (1)
-    {
-        // Show diagonal for ~500ms
-        HLEDMATRIX_DisplayFrame(frame1, 50);
-
-        // Show square for ~500ms
-        HLEDMATRIX_DisplayFrame(frame2, 50);
-    }
-}*/
 
 
