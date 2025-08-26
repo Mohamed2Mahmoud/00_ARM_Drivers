@@ -1,7 +1,67 @@
 // ../APP/main.c
 #include "Includes_int.h"
 
-// auto increment every 2 sec
+void LED0(void);
+void LED1(void);
+void LED2(void);
+
+
+int main(void)
+{
+	/* Enable Clock */
+	MRCC_vInit();
+	MRCC_vEnableClk(RCC_AHB1, RCC_GPIOA);
+	GPIOx_PinConfig_t LED[3] ={
+			{GPIO_PORTA, PIN0, GPIO_MODE_OUTPUT, GPIO_PUSHPULL, GPIO_LOW_SPEED, GPIO_NOPULL,0},
+			{GPIO_PORTA, PIN1, GPIO_MODE_OUTPUT, GPIO_PUSHPULL, GPIO_LOW_SPEED, GPIO_NOPULL,0},
+			{GPIO_PORTA, PIN2, GPIO_MODE_OUTPUT, GPIO_PUSHPULL, GPIO_LOW_SPEED, GPIO_NOPULL,0}
+
+	};
+	for(u8 i=0;i<3;i++)
+		MGPIO_vPinInit(&LED[i]);
+
+
+	OS_CreateTask(LED0, 5, 0, 0);
+	OS_CreateTask(LED1, 1, 1, 0);
+	OS_CreateTask(LED2, 10, 2, 0);
+
+	OS_vStart();
+	while(1)
+	{
+
+	}
+
+	return 0 ;
+}
+
+void LED0(void)
+{
+	MGPIO_vTogPinValue(GPIO_PORTA, PIN0);
+}
+void LED1(void)
+{
+	MGPIO_vTogPinValue(GPIO_PORTA, PIN1);
+}
+void LED2(void)
+{
+	MGPIO_vTogPinValue(GPIO_PORTA, PIN2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 
 	int main(void)
 	{
@@ -45,7 +105,7 @@
 	        // Show square for ~500ms
 	        HLEDMATRIX_DisplayFrame(frame2, 50);
 	    }
-	}
+	}*/
 
 
 // btn Increment and decrment

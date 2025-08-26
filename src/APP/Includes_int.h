@@ -24,5 +24,8 @@
 #include "../HAL/LEDMATRIX/LEDMATRIX_int.h"
 #include "../HAL/LEDMATRIX/LEDMATRIX_cfg.h"
 
+#include "../RTOS/scheduler/Scheduler_int.h"
+#include "../RTOS/scheduler/Scheduler_cfg.h"
+
 
 #endif /* APP_INCLUDES_INT_H_ */

@@ -11,7 +11,7 @@
 #include "../../LIB/BIT_MATH.h"
 #include "../../LIB/STD_TYPES.h"
 typedef enum{
-	Running,
+	Running=1,
 	Suspended,
 
 }TaskState;
@@ -25,8 +25,10 @@ typedef struct{
 
 }Task;
 
-#define PRiorty 0;
-#define RESERVED 1;
-#define NO_TASK_ERROR 2;
+
+
+#define OUT_OF_RANGE_ERROR		1
+#define RESERVED_PRIORITY_ERROR	2
+#define NO_TASK_ERROR			3
 
 #endif /* RTOS_SCHEDULER_SCHEDULER_PRV_H_ */

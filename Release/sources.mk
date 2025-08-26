@@ -39,6 +39,7 @@ src/MCAL/NVIC \
 src/MCAL/RCC \
 src/MCAL/SYSCFG \
 src/MCAL/SYSTICK \
+src/RTOS/scheduler \
 src \
 system/src/cmsis \
 system/src/cortexm \

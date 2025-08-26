@@ -18,7 +18,9 @@ src/APP/main.o: ../src/APP/main.c ../src/APP/Includes_int.h \
  ../src/APP/../HAL/LEDMATRIX/../../LIB/STD_TYPES.h \
  ../src/APP/../HAL/LEDMATRIX/LEDMATRIX_cfg.h \
  ../src/APP/../HAL/LEDMATRIX/../../MCAL/GPIO/GPIO_int.h \
- ../src/APP/../HAL/LEDMATRIX/LEDMATRIX_int.h
+ ../src/APP/../HAL/LEDMATRIX/LEDMATRIX_int.h \
+ ../src/APP/../RTOS/scheduler/Scheduler_int.h \
+ ../src/APP/../RTOS/scheduler/Scheduler_cfg.h
 
 ../src/APP/Includes_int.h:
 
@@ -67,3 +69,7 @@ src/APP/main.o: ../src/APP/main.c ../src/APP/Includes_int.h \
 ../src/APP/../HAL/LEDMATRIX/../../MCAL/GPIO/GPIO_int.h:
 
 ../src/APP/../HAL/LEDMATRIX/LEDMATRIX_int.h:
+
+../src/APP/../RTOS/scheduler/Scheduler_int.h:
+
+../src/APP/../RTOS/scheduler/Scheduler_cfg.h:

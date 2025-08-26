@@ -148,6 +148,21 @@ void MGPIO_vSetPinValue(u8 A_u8PortId, u8 A_u8PinNo, u8 A_u8Value){
 	    }
 
 }
+void MGPIO_vTogPinValue(u8 A_u8PortID, u8 A_u8PinNum)
+{
+	switch(A_u8PortID)
+	{
+	case GPIO_PORTA:
+		TOG_BIT(GPIOA -> ODR, A_u8PinNum);
+		break;
+	case GPIO_PORTB:
+		TOG_BIT(GPIOB -> ODR, A_u8PinNum);
+		break;
+	case GPIO_PORTC:
+		TOG_BIT(GPIOC -> ODR, A_u8PinNum);
+		break;
+	}
+}
 
 
 u8 MGPIO_u8GetPinValue(u8 A_u8PortId, u8 A_u8PinNo) {
