@@ -226,14 +226,45 @@ void MGPIO_vSetAlt(u8 A_u8PortId, u8 A_u8PinNo, u16 A_u16AFx)
         if (A_u8PinNo <= 7) {
             GPIOx->AFRL &= ~(0xF << (A_u8PinNo * 4));      // Clear
             GPIOx->AFRL |=  ((A_u16AFx & 0xF) << (A_u8PinNo * 4)); // Set
-        } else {
+        } else if(A_u8PinNo >= 8 && A_u8PinNo < 16){
             GPIOx->AFRH &= ~(0xF << ((A_u8PinNo - 8) * 4));
             GPIOx->AFRH |=  ((A_u16AFx & 0xF) << ((A_u8PinNo - 8) * 4));
         }
     }
 }
 
+void MGPIO_vSetPinAtomic(u8 A_u8PortId, u8 A_u8PinNo, u8 A_u8Value)
+{
+    GPIOx_MemMap_t* GPIOx = NULL;
 
+    // Protect debug pins (PA13, PA14, PA15) and PB3/PB4
+    if ((A_u8PortId == GPIO_PORTA) &&
+        ((A_u8PinNo == 13) || (A_u8PinNo == 14) || (A_u8PinNo == 15)))
+    {
+        return;
+    }
+    else if ((A_u8PortId == GPIO_PORTB) &&
+             ((A_u8PinNo == 3) || (A_u8PinNo == 4)))
+    {
+        return;
+    }
+
+    switch (A_u8PortId) {
+        case GPIO_PORTA: GPIOx = (GPIOx_MemMap_t*)GPIOA_BASE_ADDR; break;
+        case GPIO_PORTB: GPIOx = (GPIOx_MemMap_t*)GPIOB_BASE_ADDR; break;
+        case GPIO_PORTC: GPIOx = (GPIOx_MemMap_t*)GPIOC_BASE_ADDR; break;
+        case GPIO_PORTD: GPIOx = (GPIOx_MemMap_t*)GPIOD_BASE_ADDR; break;
+        case GPIO_PORTE: GPIOx = (GPIOx_MemMap_t*)GPIOE_BASE_ADDR; break;
+        case GPIO_PORTH: GPIOx = (GPIOx_MemMap_t*)GPIOH_BASE_ADDR; break;
+        default: return; // Invalid port
+    }
+
+    if (A_u8Value == GPIO_HIGH) {
+        GPIOx->BSRR = (1U << A_u8PinNo);       // Set bit
+    } else {
+        GPIOx->BSRR = (1U << (A_u8PinNo + 16)); // Reset bit
+    }
+}
 void MGPIO_vPinInit(GPIOx_PinConfig_t* A_xPinCfg) {
     MGPIO_vSetPinMode(A_xPinCfg->port, A_xPinCfg->pin, A_xPinCfg->mode);
     MGPIO_vSetPinOutputType(A_xPinCfg->port, A_xPinCfg->pin, A_xPinCfg->outputType);

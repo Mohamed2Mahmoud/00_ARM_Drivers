@@ -22,8 +22,10 @@ RM := rm -rf
 -include src/MCAL/EXTI/subdir.mk
 -include src/LIB/Delay/subdir.mk
 -include src/HAL/Seven_Segment/subdir.mk
+-include src/HAL/S2P/subdir.mk
 -include src/HAL/RGB_LED/subdir.mk
 -include src/HAL/LEDMATRIX/subdir.mk
+-include src/HAL/DAC_8bit/subdir.mk
 -include src/HAL/Button/subdir.mk
 -include src/APP/subdir.mk
 -include src/subdir.mk

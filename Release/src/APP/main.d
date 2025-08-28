@@ -19,8 +19,14 @@ src/APP/main.o: ../src/APP/main.c ../src/APP/Includes_int.h \
  ../src/APP/../HAL/LEDMATRIX/LEDMATRIX_cfg.h \
  ../src/APP/../HAL/LEDMATRIX/../../MCAL/GPIO/GPIO_int.h \
  ../src/APP/../HAL/LEDMATRIX/LEDMATRIX_int.h \
+ ../src/APP/../HAL/DAC_8bit/DAC_int.h \
+ ../src/APP/../HAL/DAC_8bit/../../LIB/STD_TYPES.h \
+ ../src/APP/../HAL/DAC_8bit/../../LIB/BIT_MATH.h \
+ ../src/APP/../HAL/DAC_8bit/../../MCAL/GPIO/GPIO_int.h \
+ ../src/APP/../HAL/DAC_8bit/../../MCAL/SYSTICK/SYSTICK_int.h \
  ../src/APP/../RTOS/scheduler/Scheduler_int.h \
- ../src/APP/../RTOS/scheduler/Scheduler_cfg.h
+ ../src/APP/../RTOS/scheduler/../../LIB/STD_TYPES.h \
+ ../src/APP/../RTOS/scheduler/Scheduler_cfg.h ../src/APP/sound.h
 
 ../src/APP/Includes_int.h:
 
@@ -70,6 +76,20 @@ src/APP/main.o: ../src/APP/main.c ../src/APP/Includes_int.h \
 
 ../src/APP/../HAL/LEDMATRIX/LEDMATRIX_int.h:
 
+../src/APP/../HAL/DAC_8bit/DAC_int.h:
+
+../src/APP/../HAL/DAC_8bit/../../LIB/STD_TYPES.h:
+
+../src/APP/../HAL/DAC_8bit/../../LIB/BIT_MATH.h:
+
+../src/APP/../HAL/DAC_8bit/../../MCAL/GPIO/GPIO_int.h:
+
+../src/APP/../HAL/DAC_8bit/../../MCAL/SYSTICK/SYSTICK_int.h:
+
 ../src/APP/../RTOS/scheduler/Scheduler_int.h:
 
+../src/APP/../RTOS/scheduler/../../LIB/STD_TYPES.h:
+
 ../src/APP/../RTOS/scheduler/Scheduler_cfg.h:
+
+../src/APP/sound.h:

@@ -29,8 +29,10 @@ CPP_DEPS :=
 SUBDIRS := \
 src/APP \
 src/HAL/Button \
+src/HAL/DAC_8bit \
 src/HAL/LEDMATRIX \
 src/HAL/RGB_LED \
+src/HAL/S2P \
 src/HAL/Seven_Segment \
 src/LIB/Delay \
 src/MCAL/EXTI \

@@ -129,6 +129,21 @@ void MSYSTICK_vSetInterval_Multi(u32 A_u32Delay_ms, void(*A_xFptr)(void))
 			MSYSTICK_vStartTimer(L_u32Ticks);
 		}
 }
+void MSYSTICK_vSetInterval_Multi_Tick(u32 A_u32Delay_ms, void(*A_xFptr)(void))
+{
+	G_u8SingleFlag = 0;
+	u32 L_u32Ticks = A_u32Delay_ms;
+
+		G_xFptr = A_xFptr;
+
+		/* Reset Timer */
+		SYSTICK->VAL = 0;
+
+		if((L_u32Ticks >= 0x00000001) && (L_u32Ticks < 0x00FFFFFF))
+		{
+			MSYSTICK_vStartTimer(L_u32Ticks);
+		}
+}
 
 void SysTick_Handler(void)
 {

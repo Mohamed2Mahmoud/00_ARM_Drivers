@@ -23,6 +23,7 @@
 
 #include "../HAL/LEDMATRIX/LEDMATRIX_int.h"
 #include "../HAL/LEDMATRIX/LEDMATRIX_cfg.h"
+#include "../HAL/DAC_8bit/DAC_int.h"
 
 #include "../RTOS/scheduler/Scheduler_int.h"
 #include "../RTOS/scheduler/Scheduler_cfg.h"

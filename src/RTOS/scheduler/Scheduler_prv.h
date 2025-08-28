@@ -15,12 +15,12 @@ typedef enum{
 	Suspended,
 
 }TaskState;
+
 typedef struct{
 	void (*Fptr)(void);
 	u32 Periodicity;
 	u32 FirstDealy;
 	u8 Priority;
-
 	TaskState State;
 
 }Task;

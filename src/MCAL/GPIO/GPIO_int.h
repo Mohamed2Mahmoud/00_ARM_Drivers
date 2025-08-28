@@ -71,6 +71,60 @@ typedef struct {
 #define GPIO_LOW            0
 #define GPIO_HIGH           1
 
+/*======================================================
+ * Alternate Function (AF) Macros for STM32F401C
+ *======================================================*/
+
+/* AF0: System (SYS) functions */
+#define GPIO_AF0_SYSTEM        0x0   // SYS_AF: MCO, RTC, etc.
+
+/* AF1: TIM1 / TIM2 */
+#define GPIO_AF1_TIM1_TIM2     0x1
+
+/* AF2: TIM3 / TIM4 / TIM5 */
+#define GPIO_AF2_TIM3_TIM4_TIM5 0x2
+
+/* AF3: TIM9 / TIM10 / TIM11 */
+#define GPIO_AF3_TIM9_TIM10_TIM11 0x3
+
+/* AF4: I2C1 / I2C2 / I2C3 */
+#define GPIO_AF4_I2C1_I2C2_I2C3 0x4
+
+/* AF5: SPI1 / SPI2 */
+#define GPIO_AF5_SPI1_SPI2     0x5
+
+/* AF6: SPI3 */
+#define GPIO_AF6_SPI3          0x6
+
+/* AF7: USART1 / USART2 */
+#define GPIO_AF7_USART1_USART2 0x7
+
+/* AF8: USART6 */
+#define GPIO_AF8_USART6        0x8
+
+/* AF9: I2C2 / I2C3 / CAN1 */
+#define GPIO_AF9_I2C2_I2C3_CAN1 0x9
+
+/* AF10: OTG_FS (USB) */
+#define GPIO_AF10_OTG_FS       0xA
+
+/* AF11: (Not used in STM32F401C) */
+#define GPIO_AF11_UNUSED       0xB
+
+/* AF12: SDIO */
+#define GPIO_AF12_SDIO         0xC
+
+/* AF13: (Not used in STM32F401C) */
+#define GPIO_AF13_UNUSED       0xD
+
+/* AF14: (Not used in STM32F401C) */
+#define GPIO_AF14_UNUSED       0xE
+
+/* AF15: EVENTOUT */
+#define GPIO_AF15_EVENTOUT     0xF
+
+
+
 /* ------------------- Functions Prototypes ------------------- */
 void MGPIO_vSetPinMode(u8 A_u8PortId, u8 A_u8PinNo, u8 A_u8Mode);
 void MGPIO_vSetPinOutputType(u8 A_u8PortId, u8 A_u8PinNo, u8 A_u8OutputType);
@@ -81,5 +135,6 @@ u8   MGPIO_u8GetPinValue(u8 A_u8PortId, u8 A_u8PinNo);
 void   MGPIO_vTogPinValue(u8 A_u8PortId, u8 A_u8PinNo);
 void MGPIO_vSetAlt(u8 A_u8PortID, u8 A_u8PinNum, u16 A_u16AFx);
 void MGPIO_vPinInit(GPIOx_PinConfig_t* A_xPinCfg);
+void MGPIO_vSetPinAtomic(u8 A_u8PortId, u8 A_u8PinNo, u8 A_u8Value);
 
 #endif /* MCAL_GPIO_INT_H_ */

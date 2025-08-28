@@ -4,8 +4,6 @@ c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bi
                               ./system/src/newlib/_sbrk.o (__errno)
 c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-impure.o)
                               c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-errno.o) (_impure_ptr)
-c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-memset.o)
-                              ./src/RTOS/scheduler/Scheduler_prg.o (memset)
 
 Allocating common symbols
 Common symbol       size              file
@@ -90,8 +88,8 @@ Discarded input sections
  .debug_abbrev  0x00000000      0x192 ./system/src/stm32f4-hal/stm32f4xx_hal_dfsdm.o
  .debug_aranges
                 0x00000000       0x18 ./system/src/stm32f4-hal/stm32f4xx_hal_dfsdm.o
- .debug_line    0x00000000      0x1da ./system/src/stm32f4-hal/stm32f4xx_hal_dfsdm.o
- .debug_str     0x00000000      0x5cb ./system/src/stm32f4-hal/stm32f4xx_hal_dfsdm.o
+ .debug_line    0x00000000      0x170 ./system/src/stm32f4-hal/stm32f4xx_hal_dfsdm.o
+ .debug_str     0x00000000      0x5e4 ./system/src/stm32f4-hal/stm32f4xx_hal_dfsdm.o
  .comment       0x00000000       0x7f ./system/src/stm32f4-hal/stm32f4xx_hal_dfsdm.o
  .ARM.attributes
                 0x00000000       0x33 ./system/src/stm32f4-hal/stm32f4xx_hal_dfsdm.o
@@ -134,8 +132,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x88 ./system/src/stm32f4-hal/stm32f4xx_hal_flash.o
  .debug_ranges  0x00000000       0xa8 ./system/src/stm32f4-hal/stm32f4xx_hal_flash.o
- .debug_line    0x00000000      0x4a8 ./system/src/stm32f4-hal/stm32f4xx_hal_flash.o
- .debug_str     0x00000000      0x929 ./system/src/stm32f4-hal/stm32f4xx_hal_flash.o
+ .debug_line    0x00000000      0x43e ./system/src/stm32f4-hal/stm32f4xx_hal_flash.o
+ .debug_str     0x00000000      0x942 ./system/src/stm32f4-hal/stm32f4xx_hal_flash.o
  .comment       0x00000000       0x7f ./system/src/stm32f4-hal/stm32f4xx_hal_flash.o
  .debug_frame   0x00000000      0x13c ./system/src/stm32f4-hal/stm32f4xx_hal_flash.o
  .ARM.attributes
@@ -166,8 +164,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x58 ./system/src/stm32f4-hal/stm32f4xx_hal_gpio.o
  .debug_ranges  0x00000000       0x68 ./system/src/stm32f4-hal/stm32f4xx_hal_gpio.o
- .debug_line    0x00000000      0x429 ./system/src/stm32f4-hal/stm32f4xx_hal_gpio.o
- .debug_str     0x00000000      0x8e2 ./system/src/stm32f4-hal/stm32f4xx_hal_gpio.o
+ .debug_line    0x00000000      0x3bf ./system/src/stm32f4-hal/stm32f4xx_hal_gpio.o
+ .debug_str     0x00000000      0x8fb ./system/src/stm32f4-hal/stm32f4xx_hal_gpio.o
  .comment       0x00000000       0x7f ./system/src/stm32f4-hal/stm32f4xx_hal_gpio.o
  .debug_frame   0x00000000       0xd8 ./system/src/stm32f4-hal/stm32f4xx_hal_gpio.o
  .ARM.attributes
@@ -185,8 +183,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x28 ./system/src/stm32f4-hal/stm32f4xx_hal_iwdg.o
  .debug_ranges  0x00000000       0x18 ./system/src/stm32f4-hal/stm32f4xx_hal_iwdg.o
- .debug_line    0x00000000      0x2c2 ./system/src/stm32f4-hal/stm32f4xx_hal_iwdg.o
- .debug_str     0x00000000      0x693 ./system/src/stm32f4-hal/stm32f4xx_hal_iwdg.o
+ .debug_line    0x00000000      0x258 ./system/src/stm32f4-hal/stm32f4xx_hal_iwdg.o
+ .debug_str     0x00000000      0x6ac ./system/src/stm32f4-hal/stm32f4xx_hal_iwdg.o
  .comment       0x00000000       0x7f ./system/src/stm32f4-hal/stm32f4xx_hal_iwdg.o
  .debug_frame   0x00000000       0x3c ./system/src/stm32f4-hal/stm32f4xx_hal_iwdg.o
  .ARM.attributes
@@ -234,8 +232,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0xa0 ./system/src/stm32f4-hal/stm32f4xx_hal_pwr.o
  .debug_ranges  0x00000000       0x90 ./system/src/stm32f4-hal/stm32f4xx_hal_pwr.o
- .debug_line    0x00000000      0x412 ./system/src/stm32f4-hal/stm32f4xx_hal_pwr.o
- .debug_str     0x00000000      0x96a ./system/src/stm32f4-hal/stm32f4xx_hal_pwr.o
+ .debug_line    0x00000000      0x3a8 ./system/src/stm32f4-hal/stm32f4xx_hal_pwr.o
+ .debug_str     0x00000000      0x983 ./system/src/stm32f4-hal/stm32f4xx_hal_pwr.o
  .comment       0x00000000       0x7f ./system/src/stm32f4-hal/stm32f4xx_hal_pwr.o
  .debug_frame   0x00000000      0x128 ./system/src/stm32f4-hal/stm32f4xx_hal_pwr.o
  .ARM.attributes
@@ -275,8 +273,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x20 ./system/src/newlib/_cxx.o
  .debug_ranges  0x00000000       0x10 ./system/src/newlib/_cxx.o
- .debug_line    0x00000000      0x4d4 ./system/src/newlib/_cxx.o
- .debug_str     0x00000000      0x80f ./system/src/newlib/_cxx.o
+ .debug_line    0x00000000      0x396 ./system/src/newlib/_cxx.o
+ .debug_str     0x00000000      0x828 ./system/src/newlib/_cxx.o
  .comment       0x00000000       0x7f ./system/src/newlib/_cxx.o
  .debug_frame   0x00000000       0x40 ./system/src/newlib/_cxx.o
  .ARM.attributes
@@ -297,8 +295,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x20 ./system/src/newlib/_sbrk.o
  .debug_ranges  0x00000000       0x10 ./system/src/newlib/_sbrk.o
- .debug_line    0x00000000      0x1e5 ./system/src/newlib/_sbrk.o
- .debug_str     0x00000000      0x5fb ./system/src/newlib/_sbrk.o
+ .debug_line    0x00000000      0x17b ./system/src/newlib/_sbrk.o
+ .debug_str     0x00000000      0x614 ./system/src/newlib/_sbrk.o
  .comment       0x00000000       0x7f ./system/src/newlib/_sbrk.o
  .debug_frame   0x00000000       0x28 ./system/src/newlib/_sbrk.o
  .ARM.attributes
@@ -333,8 +331,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x20 ./system/src/newlib/assert.o
  .debug_ranges  0x00000000       0x10 ./system/src/newlib/assert.o
- .debug_line    0x00000000      0x29e ./system/src/newlib/assert.o
- .debug_str     0x00000000      0x604 ./system/src/newlib/assert.o
+ .debug_line    0x00000000      0x1ff ./system/src/newlib/assert.o
+ .debug_str     0x00000000      0x61d ./system/src/newlib/assert.o
  .comment       0x00000000       0x7f ./system/src/newlib/assert.o
  .debug_frame   0x00000000       0x28 ./system/src/newlib/assert.o
  .ARM.attributes
@@ -343,7 +341,7 @@ Discarded input sections
  .data          0x00000000        0x0 ./system/src/diag/Trace.o
  .bss           0x00000000        0x0 ./system/src/diag/Trace.o
  .debug_line    0x00000000        0x0 ./system/src/diag/Trace.o
- .debug_str     0x00000000      0x117 ./system/src/diag/Trace.o
+ .debug_str     0x00000000      0x130 ./system/src/diag/Trace.o
  .comment       0x00000000       0x7f ./system/src/diag/Trace.o
  .ARM.attributes
                 0x00000000       0x33 ./system/src/diag/Trace.o
@@ -351,7 +349,7 @@ Discarded input sections
  .data          0x00000000        0x0 ./system/src/diag/trace_impl.o
  .bss           0x00000000        0x0 ./system/src/diag/trace_impl.o
  .debug_line    0x00000000        0x0 ./system/src/diag/trace_impl.o
- .debug_str     0x00000000      0x11c ./system/src/diag/trace_impl.o
+ .debug_str     0x00000000      0x135 ./system/src/diag/trace_impl.o
  .comment       0x00000000       0x7f ./system/src/diag/trace_impl.o
  .ARM.attributes
                 0x00000000       0x33 ./system/src/diag/trace_impl.o
@@ -375,14 +373,33 @@ Discarded input sections
  .text          0x00000000        0x0 ./src/RTOS/scheduler/Scheduler_prg.o
  .data          0x00000000        0x0 ./src/RTOS/scheduler/Scheduler_prg.o
  .bss           0x00000000        0x0 ./src/RTOS/scheduler/Scheduler_prg.o
+ .text.OS_Scheduler
+                0x00000000       0x4c ./src/RTOS/scheduler/Scheduler_prg.o
+ .text.OS_vStart
+                0x00000000       0x28 ./src/RTOS/scheduler/Scheduler_prg.o
  .text.OS_CreateTask
                 0x00000000       0x34 ./src/RTOS/scheduler/Scheduler_prg.o
  .text.OS_SuspendTask
-                0x00000000       0x18 ./src/RTOS/scheduler/Scheduler_prg.o
- .text.OS_ResumeTask
-                0x00000000       0x18 ./src/RTOS/scheduler/Scheduler_prg.o
- .text.OS_DeleteTask
                 0x00000000       0x1c ./src/RTOS/scheduler/Scheduler_prg.o
+ .text.OS_ResumeTask
+                0x00000000       0x1c ./src/RTOS/scheduler/Scheduler_prg.o
+ .text.OS_DeleteTask
+                0x00000000       0x2c ./src/RTOS/scheduler/Scheduler_prg.o
+ .rodata        0x00000000        0x2 ./src/RTOS/scheduler/Scheduler_prg.o
+ .bss.Sys_Task  0x00000000       0xa0 ./src/RTOS/scheduler/Scheduler_prg.o
+ .debug_info    0x00000000      0x32f ./src/RTOS/scheduler/Scheduler_prg.o
+ .debug_abbrev  0x00000000      0x180 ./src/RTOS/scheduler/Scheduler_prg.o
+ .debug_loc     0x00000000      0x1fe ./src/RTOS/scheduler/Scheduler_prg.o
+ .debug_aranges
+                0x00000000       0x48 ./src/RTOS/scheduler/Scheduler_prg.o
+ .debug_ranges  0x00000000       0x58 ./src/RTOS/scheduler/Scheduler_prg.o
+ .debug_line    0x00000000      0x17c ./src/RTOS/scheduler/Scheduler_prg.o
+ .debug_str     0x00000000      0x325 ./src/RTOS/scheduler/Scheduler_prg.o
+ .comment       0x00000000       0x7f ./src/RTOS/scheduler/Scheduler_prg.o
+ .debug_frame   0x00000000       0xa4 ./src/RTOS/scheduler/Scheduler_prg.o
+ .ARM.attributes
+                0x00000000       0x33 ./src/RTOS/scheduler/Scheduler_prg.o
+ COMMON         0x00000000       0x28 ./src/RTOS/scheduler/Scheduler_prg.o
  .text          0x00000000        0x0 ./src/MCAL/SYSTICK/SYSTICK_prg.o
  .data          0x00000000        0x0 ./src/MCAL/SYSTICK/SYSTICK_prg.o
  .bss           0x00000000        0x0 ./src/MCAL/SYSTICK/SYSTICK_prg.o
@@ -396,6 +413,8 @@ Discarded input sections
                 0x00000000        0xc ./src/MCAL/SYSTICK/SYSTICK_prg.o
  .text.MSYSTICK_vSetInterval_Single
                 0x00000000       0x34 ./src/MCAL/SYSTICK/SYSTICK_prg.o
+ .text.MSYSTICK_vSetInterval_Multi_Tick
+                0x00000000       0x2c ./src/MCAL/SYSTICK/SYSTICK_prg.o
  .text          0x00000000        0x0 ./src/MCAL/SYSCFG/SYSCFG_prg.o
  .data          0x00000000        0x0 ./src/MCAL/SYSCFG/SYSCFG_prg.o
  .bss           0x00000000        0x0 ./src/MCAL/SYSCFG/SYSCFG_prg.o
@@ -408,7 +427,7 @@ Discarded input sections
                 0x00000000       0x20 ./src/MCAL/SYSCFG/SYSCFG_prg.o
  .debug_ranges  0x00000000       0x10 ./src/MCAL/SYSCFG/SYSCFG_prg.o
  .debug_line    0x00000000       0x91 ./src/MCAL/SYSCFG/SYSCFG_prg.o
- .debug_str     0x00000000      0x1f7 ./src/MCAL/SYSCFG/SYSCFG_prg.o
+ .debug_str     0x00000000      0x210 ./src/MCAL/SYSCFG/SYSCFG_prg.o
  .comment       0x00000000       0x7f ./src/MCAL/SYSCFG/SYSCFG_prg.o
  .debug_frame   0x00000000       0x28 ./src/MCAL/SYSCFG/SYSCFG_prg.o
  .ARM.attributes
@@ -444,7 +463,7 @@ Discarded input sections
                 0x00000000       0x50 ./src/MCAL/NVIC/NVIC_prg.o
  .debug_ranges  0x00000000       0x40 ./src/MCAL/NVIC/NVIC_prg.o
  .debug_line    0x00000000      0x101 ./src/MCAL/NVIC/NVIC_prg.o
- .debug_str     0x00000000      0x336 ./src/MCAL/NVIC/NVIC_prg.o
+ .debug_str     0x00000000      0x34f ./src/MCAL/NVIC/NVIC_prg.o
  .comment       0x00000000       0x7f ./src/MCAL/NVIC/NVIC_prg.o
  .debug_frame   0x00000000       0x80 ./src/MCAL/NVIC/NVIC_prg.o
  .ARM.attributes
@@ -452,10 +471,12 @@ Discarded input sections
  .text          0x00000000        0x0 ./src/MCAL/GPIO/GPIO_prg.o
  .data          0x00000000        0x0 ./src/MCAL/GPIO/GPIO_prg.o
  .bss           0x00000000        0x0 ./src/MCAL/GPIO/GPIO_prg.o
- .text.MGPIO_vSetPinValue
-                0x00000000       0x7c ./src/MCAL/GPIO/GPIO_prg.o
+ .text.MGPIO_vTogPinValue
+                0x00000000       0x30 ./src/MCAL/GPIO/GPIO_prg.o
  .text.MGPIO_u8GetPinValue
                 0x00000000       0x60 ./src/MCAL/GPIO/GPIO_prg.o
+ .text.MGPIO_vSetPinAtomic
+                0x00000000       0x78 ./src/MCAL/GPIO/GPIO_prg.o
  .text          0x00000000        0x0 ./src/MCAL/EXTI/EXTI_prg.o
  .data          0x00000000        0x0 ./src/MCAL/EXTI/EXTI_prg.o
  .bss           0x00000000        0x0 ./src/MCAL/EXTI/EXTI_prg.o
@@ -491,7 +512,7 @@ Discarded input sections
                 0x00000000       0x30 ./src/LIB/Delay/Delay_prg.o
  .debug_ranges  0x00000000       0x20 ./src/LIB/Delay/Delay_prg.o
  .debug_line    0x00000000       0xba ./src/LIB/Delay/Delay_prg.o
- .debug_str     0x00000000      0x1a1 ./src/LIB/Delay/Delay_prg.o
+ .debug_str     0x00000000      0x1ba ./src/LIB/Delay/Delay_prg.o
  .comment       0x00000000       0x7f ./src/LIB/Delay/Delay_prg.o
  .debug_frame   0x00000000       0x64 ./src/LIB/Delay/Delay_prg.o
  .ARM.attributes
@@ -519,6 +540,29 @@ Discarded input sections
  .debug_frame   0x00000000       0x78 ./src/HAL/Seven_Segment/Seven_Segment_prg.o
  .ARM.attributes
                 0x00000000       0x33 ./src/HAL/Seven_Segment/Seven_Segment_prg.o
+ .text          0x00000000        0x0 ./src/HAL/S2P/S2P_prg.o
+ .data          0x00000000        0x0 ./src/HAL/S2P/S2P_prg.o
+ .bss           0x00000000        0x0 ./src/HAL/S2P/S2P_prg.o
+ .text.S2P_vInit
+                0x00000000       0x68 ./src/HAL/S2P/S2P_prg.o
+ .text.S2P_ShiftData
+                0x00000000       0x22 ./src/HAL/S2P/S2P_prg.o
+ .text.S2P_LatchData
+                0x00000000       0x22 ./src/HAL/S2P/S2P_prg.o
+ .text.S2P_SendData
+                0x00000000        0x2 ./src/HAL/S2P/S2P_prg.o
+ .debug_info    0x00000000      0x2f2 ./src/HAL/S2P/S2P_prg.o
+ .debug_abbrev  0x00000000       0xf7 ./src/HAL/S2P/S2P_prg.o
+ .debug_loc     0x00000000       0xb8 ./src/HAL/S2P/S2P_prg.o
+ .debug_aranges
+                0x00000000       0x38 ./src/HAL/S2P/S2P_prg.o
+ .debug_ranges  0x00000000       0x28 ./src/HAL/S2P/S2P_prg.o
+ .debug_line    0x00000000      0x13a ./src/HAL/S2P/S2P_prg.o
+ .debug_str     0x00000000      0x2b1 ./src/HAL/S2P/S2P_prg.o
+ .comment       0x00000000       0x7f ./src/HAL/S2P/S2P_prg.o
+ .debug_frame   0x00000000       0x7c ./src/HAL/S2P/S2P_prg.o
+ .ARM.attributes
+                0x00000000       0x33 ./src/HAL/S2P/S2P_prg.o
  .text          0x00000000        0x0 ./src/HAL/RGB_LED/RGB_prg.o
  .data          0x00000000        0x0 ./src/HAL/RGB_LED/RGB_prg.o
  .bss           0x00000000        0x0 ./src/HAL/RGB_LED/RGB_prg.o
@@ -574,6 +618,9 @@ Discarded input sections
  .debug_frame   0x00000000       0x68 ./src/HAL/LEDMATRIX/LEDMATRIX_prg.o
  .ARM.attributes
                 0x00000000       0x33 ./src/HAL/LEDMATRIX/LEDMATRIX_prg.o
+ .text          0x00000000        0x0 ./src/HAL/DAC_8bit/DAC_prg.o
+ .data          0x00000000        0x0 ./src/HAL/DAC_8bit/DAC_prg.o
+ .bss           0x00000000        0x0 ./src/HAL/DAC_8bit/DAC_prg.o
  .text          0x00000000        0x0 ./src/HAL/Button/BTN_prg.o
  .data          0x00000000        0x0 ./src/HAL/Button/BTN_prg.o
  .bss           0x00000000        0x0 ./src/HAL/Button/BTN_prg.o
@@ -596,6 +643,14 @@ Discarded input sections
  .text          0x00000000        0x0 ./src/APP/main.o
  .data          0x00000000        0x0 ./src/APP/main.o
  .bss           0x00000000        0x0 ./src/APP/main.o
+ .text          0x00000000        0x0 ./src/APP/old_mains.o
+ .data          0x00000000        0x0 ./src/APP/old_mains.o
+ .bss           0x00000000        0x0 ./src/APP/old_mains.o
+ .debug_line    0x00000000        0x0 ./src/APP/old_mains.o
+ .debug_str     0x00000000      0x12c ./src/APP/old_mains.o
+ .comment       0x00000000       0x7f ./src/APP/old_mains.o
+ .ARM.attributes
+                0x00000000       0x33 ./src/APP/old_mains.o
  .text          0x00000000        0x0 ./src/_initialize_hardware.o
  .data          0x00000000        0x0 ./src/_initialize_hardware.o
  .bss           0x00000000        0x0 ./src/_initialize_hardware.o
@@ -626,9 +681,6 @@ Discarded input sections
                 0x00000000        0x4 c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-impure.o)
  .ARM.attributes
                 0x00000000       0x2e c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-impure.o)
- .text          0x00000000        0x0 c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-memset.o)
- .data          0x00000000        0x0 c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-memset.o)
- .bss           0x00000000        0x0 c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-memset.o)
 
 Memory Configuration
 
@@ -675,11 +727,14 @@ LOAD ./src/MCAL/GPIO/GPIO_prg.o
 LOAD ./src/MCAL/EXTI/EXTI_prg.o
 LOAD ./src/LIB/Delay/Delay_prg.o
 LOAD ./src/HAL/Seven_Segment/Seven_Segment_prg.o
+LOAD ./src/HAL/S2P/S2P_prg.o
 LOAD ./src/HAL/RGB_LED/RGB_prg.o
 LOAD ./src/HAL/LEDMATRIX/LEDMATRIX_cfg.o
 LOAD ./src/HAL/LEDMATRIX/LEDMATRIX_prg.o
+LOAD ./src/HAL/DAC_8bit/DAC_prg.o
 LOAD ./src/HAL/Button/BTN_prg.o
 LOAD ./src/APP/main.o
+LOAD ./src/APP/old_mains.o
 LOAD ./src/_initialize_hardware.o
 LOAD ./src/stm32f4xx_hal_msp.o
 LOAD c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libstdc++_nano.a
@@ -700,7 +755,7 @@ END GROUP
                 0x2000fc00                __Main_Stack_Limit = (__stack - __Main_Stack_Size)
                 [!provide]                PROVIDE (_Main_Stack_Limit, __Main_Stack_Limit)
                 0x00000100                _Minimum_Stack_Size = 0x100
-                0x20000124                PROVIDE (_Heap_Begin, _end_noinit)
+                0x2000006c                PROVIDE (_Heap_Begin, _end_noinit)
                 0x2000fc00                PROVIDE (_Heap_Limit, (__stack - __Main_Stack_Size))
 
 .isr_vector     0x08000000      0x2c6
@@ -789,16 +844,16 @@ END GROUP
 
 .inits          0x080002c8       0x28
                 0x080002c8                __data_regions_array_start = .
-                0x080002c8        0x4 LONG 0x80011bc LOADADDR (.data)
+                0x080002c8        0x4 LONG 0x80039bc LOADADDR (.data)
                 0x080002cc        0x4 LONG 0x20000000 ADDR (.data)
-                0x080002d0        0x4 LONG 0x2000000c (ADDR (.data) + SIZEOF (.data))
-                0x080002d4        0x4 LONG 0x80011bc LOADADDR (.data_CCMRAM)
+                0x080002d0        0x4 LONG 0x2000001c (ADDR (.data) + SIZEOF (.data))
+                0x080002d4        0x4 LONG 0x80039bc LOADADDR (.data_CCMRAM)
                 0x080002d8        0x4 LONG 0x10000000 ADDR (.data_CCMRAM)
                 0x080002dc        0x4 LONG 0x10000000 (ADDR (.data_CCMRAM) + SIZEOF (.data_CCMRAM))
                 0x080002e0                __data_regions_array_end = .
                 0x080002e0                __bss_regions_array_start = .
-                0x080002e0        0x4 LONG 0x2000000c ADDR (.bss)
-                0x080002e4        0x4 LONG 0x20000124 (ADDR (.bss) + SIZEOF (.bss))
+                0x080002e0        0x4 LONG 0x2000001c ADDR (.bss)
+                0x080002e4        0x4 LONG 0x2000006c (ADDR (.bss) + SIZEOF (.bss))
                 0x080002e8        0x4 LONG 0x10000000 ADDR (.bss_CCMRAM)
                 0x080002ec        0x4 LONG 0x10000000 (ADDR (.bss_CCMRAM) + SIZEOF (.bss_CCMRAM))
                 0x080002f0                __bss_regions_array_end = .
@@ -824,7 +879,7 @@ END GROUP
 .flashtext
  *(.flashtext .flashtext.*)
 
-.text           0x080002f0      0xeca
+.text           0x080002f0     0x36cb
  *(.text .text.*)
  .text.HAL_InitTick
                 0x080002f0       0x28 ./system/src/stm32f4-hal/stm32f4xx_hal.o
@@ -877,126 +932,125 @@ END GROUP
  .text.SystemCoreClockUpdate
                 0x08000964       0x60 ./system/src/cmsis/system_stm32f4xx.o
                 0x08000964                SystemCoreClockUpdate
- .text.OS_schedular
-                0x080009c4       0x48 ./src/RTOS/scheduler/Scheduler_prg.o
- .text.OS_vStart
-                0x08000a0c       0x28 ./src/RTOS/scheduler/Scheduler_prg.o
-                0x08000a0c                OS_vStart
  .text.MSYSTICK_vInit
-                0x08000a34       0x40 ./src/MCAL/SYSTICK/SYSTICK_prg.o
-                0x08000a34                MSYSTICK_vInit
+                0x080009c4       0x40 ./src/MCAL/SYSTICK/SYSTICK_prg.o
+                0x080009c4                MSYSTICK_vInit
  .text.MSYSTICK_vStartTimer
-                0x08000a74       0x18 ./src/MCAL/SYSTICK/SYSTICK_prg.o
-                0x08000a74                MSYSTICK_vStartTimer
+                0x08000a04       0x18 ./src/MCAL/SYSTICK/SYSTICK_prg.o
+                0x08000a04                MSYSTICK_vStartTimer
  .text.MSYSTICK_vStopTimer
-                0x08000a8c       0x10 ./src/MCAL/SYSTICK/SYSTICK_prg.o
-                0x08000a8c                MSYSTICK_vStopTimer
+                0x08000a1c       0x10 ./src/MCAL/SYSTICK/SYSTICK_prg.o
+                0x08000a1c                MSYSTICK_vStopTimer
  .text.MSYSTICK_vSetInterval_Multi
-                0x08000a9c       0x34 ./src/MCAL/SYSTICK/SYSTICK_prg.o
-                0x08000a9c                MSYSTICK_vSetInterval_Multi
+                0x08000a2c       0x34 ./src/MCAL/SYSTICK/SYSTICK_prg.o
+                0x08000a2c                MSYSTICK_vSetInterval_Multi
  .text.SysTick_Handler
-                0x08000ad0       0x24 ./src/MCAL/SYSTICK/SYSTICK_prg.o
-                0x08000ad0                SysTick_Handler
+                0x08000a60       0x24 ./src/MCAL/SYSTICK/SYSTICK_prg.o
+                0x08000a60                SysTick_Handler
  .text.MRCC_vInit
-                0x08000af4       0x30 ./src/MCAL/RCC/RCC_prg.o
-                0x08000af4                MRCC_vInit
+                0x08000a84       0x30 ./src/MCAL/RCC/RCC_prg.o
+                0x08000a84                MRCC_vInit
  .text.MRCC_vEnableClk
-                0x08000b24      0x1e0 ./src/MCAL/RCC/RCC_prg.o
-                0x08000b24                MRCC_vEnableClk
+                0x08000ab4      0x1e0 ./src/MCAL/RCC/RCC_prg.o
+                0x08000ab4                MRCC_vEnableClk
  .text.MGPIO_vSetPinMode
-                0x08000d04       0x80 ./src/MCAL/GPIO/GPIO_prg.o
-                0x08000d04                MGPIO_vSetPinMode
+                0x08000c94       0x80 ./src/MCAL/GPIO/GPIO_prg.o
+                0x08000c94                MGPIO_vSetPinMode
  .text.MGPIO_vSetPinOutputType
-                0x08000d84       0x74 ./src/MCAL/GPIO/GPIO_prg.o
-                0x08000d84                MGPIO_vSetPinOutputType
+                0x08000d14       0x74 ./src/MCAL/GPIO/GPIO_prg.o
+                0x08000d14                MGPIO_vSetPinOutputType
  .text.MGPIO_vSetPinOutputSpeed
-                0x08000df8       0x80 ./src/MCAL/GPIO/GPIO_prg.o
-                0x08000df8                MGPIO_vSetPinOutputSpeed
+                0x08000d88       0x80 ./src/MCAL/GPIO/GPIO_prg.o
+                0x08000d88                MGPIO_vSetPinOutputSpeed
  .text.MGPIO_vSetPinPull
-                0x08000e78       0x80 ./src/MCAL/GPIO/GPIO_prg.o
-                0x08000e78                MGPIO_vSetPinPull
- .text.MGPIO_vTogPinValue
-                0x08000ef8       0x30 ./src/MCAL/GPIO/GPIO_prg.o
-                0x08000ef8                MGPIO_vTogPinValue
+                0x08000e08       0x80 ./src/MCAL/GPIO/GPIO_prg.o
+                0x08000e08                MGPIO_vSetPinPull
+ .text.MGPIO_vSetPinValue
+                0x08000e88       0x7c ./src/MCAL/GPIO/GPIO_prg.o
+                0x08000e88                MGPIO_vSetPinValue
  .text.MGPIO_vSetAlt
-                0x08000f28       0xa0 ./src/MCAL/GPIO/GPIO_prg.o
-                0x08000f28                MGPIO_vSetAlt
+                0x08000f04       0xac ./src/MCAL/GPIO/GPIO_prg.o
+                0x08000f04                MGPIO_vSetAlt
  .text.MGPIO_vPinInit
-                0x08000fc8       0x42 ./src/MCAL/GPIO/GPIO_prg.o
-                0x08000fc8                MGPIO_vPinInit
- *fill*         0x0800100a        0x2 
+                0x08000fb0       0x42 ./src/MCAL/GPIO/GPIO_prg.o
+                0x08000fb0                MGPIO_vPinInit
+ *fill*         0x08000ff2        0x2 
  .text.EXTI0_IRQHandler
-                0x0800100c       0x20 ./src/MCAL/EXTI/EXTI_prg.o
-                0x0800100c                EXTI0_IRQHandler
+                0x08000ff4       0x20 ./src/MCAL/EXTI/EXTI_prg.o
+                0x08000ff4                EXTI0_IRQHandler
  .text.EXTI1_IRQHandler
-                0x0800102c       0x20 ./src/MCAL/EXTI/EXTI_prg.o
-                0x0800102c                EXTI1_IRQHandler
- .text.LED0     0x0800104c        0x8 ./src/APP/main.o
-                0x0800104c                LED0
- .text.LED1     0x08001054        0x8 ./src/APP/main.o
-                0x08001054                LED1
- .text.LED2     0x0800105c        0x8 ./src/APP/main.o
-                0x0800105c                LED2
+                0x08001014       0x20 ./src/MCAL/EXTI/EXTI_prg.o
+                0x08001014                EXTI1_IRQHandler
+ .text.HDAC_vInit
+                0x08001034       0x50 ./src/HAL/DAC_8bit/DAC_prg.o
+                0x08001034                HDAC_vInit
+ .text.HDAC_vSend
+                0x08001084       0x2c ./src/HAL/DAC_8bit/DAC_prg.o
+                0x08001084                HDAC_vSend
+ .text.DAC_Handler
+                0x080010b0       0x30 ./src/APP/main.o
+                0x080010b0                DAC_Handler
  .text.startup.main
-                0x08001064       0x7c ./src/APP/main.o
-                0x08001064                main
+                0x080010e0       0x28 ./src/APP/main.o
+                0x080010e0                main
  .text.SystemClock_Config
-                0x080010e0       0x94 ./src/_initialize_hardware.o
-                0x080010e0                SystemClock_Config
+                0x08001108       0x94 ./src/_initialize_hardware.o
+                0x08001108                SystemClock_Config
  .text.__initialize_hardware
-                0x08001174       0x12 ./src/_initialize_hardware.o
-                0x08001174                __initialize_hardware
+                0x0800119c       0x12 ./src/_initialize_hardware.o
+                0x0800119c                __initialize_hardware
  .text.HAL_MspInit
-                0x08001186        0x2 ./src/stm32f4xx_hal_msp.o
-                0x08001186                HAL_MspInit
- .text.memset   0x08001188       0x10 c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-memset.o)
-                0x08001188                memset
+                0x080011ae        0x2 ./src/stm32f4xx_hal_msp.o
+                0x080011ae                HAL_MspInit
  *(.rodata .rodata.* .constdata .constdata.*)
  .rodata.APBAHBPrescTable
-                0x08001198       0x10 ./system/src/stm32f4-hal/stm32f4xx_hal_rcc.o
-                0x08001198                APBAHBPrescTable
+                0x080011b0       0x10 ./system/src/stm32f4-hal/stm32f4xx_hal_rcc.o
+                0x080011b0                APBAHBPrescTable
  .rodata.AHBPrescTable
-                0x080011a8       0x10 ./system/src/cmsis/system_stm32f4xx.o
-                0x080011a8                AHBPrescTable
- .rodata        0x080011b8        0x2 ./src/RTOS/scheduler/Scheduler_prg.o
+                0x080011c0       0x10 ./system/src/cmsis/system_stm32f4xx.o
+                0x080011c0                AHBPrescTable
+ .rodata        0x080011d0        0x2 ./src/HAL/DAC_8bit/DAC_prg.o
+ .rodata.new_raw
+                0x080011d2     0x27e9 ./src/APP/main.o
+                0x080011d2                new_raw
  *(vtable)
  *(.eh_frame*)
  *(.glue_7)
- .glue_7        0x080011ba        0x0 linker stubs
+ .glue_7        0x080039bb        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x080011ba        0x0 linker stubs
+ .glue_7t       0x080039bb        0x0 linker stubs
 
-.vfp11_veneer   0x080011bc        0x0
- .vfp11_veneer  0x080011bc        0x0 linker stubs
+.vfp11_veneer   0x080039bc        0x0
+ .vfp11_veneer  0x080039bc        0x0 linker stubs
 
-.v4_bx          0x080011bc        0x0
- .v4_bx         0x080011bc        0x0 linker stubs
+.v4_bx          0x080039bc        0x0
+ .v4_bx         0x080039bc        0x0 linker stubs
 
-.iplt           0x080011bc        0x0
- .iplt          0x080011bc        0x0 ./system/src/stm32f4-hal/stm32f4xx_hal.o
+.iplt           0x080039bc        0x0
+ .iplt          0x080039bc        0x0 ./system/src/stm32f4-hal/stm32f4xx_hal.o
 
-.rel.dyn        0x080011bc        0x0
- .rel.iplt      0x080011bc        0x0 ./system/src/stm32f4-hal/stm32f4xx_hal.o
+.rel.dyn        0x080039bc        0x0
+ .rel.iplt      0x080039bc        0x0 ./system/src/stm32f4-hal/stm32f4xx_hal.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x080011bc                . = ALIGN (0x4)
-                0x080011bc                __exidx_start = .
+                0x080039bc                . = ALIGN (0x4)
+                0x080039bc                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x080011bc                __exidx_end = .
-                0x080011bc                . = ALIGN (0x4)
-                0x080011bc                _etext = .
-                0x080011bc                __etext = .
+                0x080039bc                __exidx_end = .
+                0x080039bc                . = ALIGN (0x4)
+                0x080039bc                _etext = .
+                0x080039bc                __etext = .
 
-.data_CCMRAM    0x10000000        0x0 load address 0x080011bc
+.data_CCMRAM    0x10000000        0x0 load address 0x080039bc
  FILL mask 0xff
  *(.data.CCMRAM .data.CCMRAM.*)
                 0x10000000                . = ALIGN (0x4)
-                0x080011bc                _sidata = LOADADDR (.data)
+                0x080039bc                _sidata = LOADADDR (.data)
 
-.data           0x20000000        0xc load address 0x080011bc
+.data           0x20000000       0x1c load address 0x080039bc
  FILL mask 0xff
                 0x20000000                _sdata = .
                 0x20000000                __data_start__ = .
@@ -1007,58 +1061,61 @@ END GROUP
  .data.SystemCoreClock
                 0x20000008        0x4 ./system/src/cmsis/system_stm32f4xx.o
                 0x20000008                SystemCoreClock
+ .data.DAC      0x2000000c        0x9 ./src/APP/main.o
+                0x2000000c                DAC
+ *fill*         0x20000015        0x3 ff
+ .data.new_raw_len
+                0x20000018        0x4 ./src/APP/main.o
+                0x20000018                new_raw_len
  *(.data_end .data_end.*)
-                0x2000000c                . = ALIGN (0x4)
-                0x2000000c                _edata = .
-                0x2000000c                __data_end__ = .
+                0x2000001c                . = ALIGN (0x4)
+                0x2000001c                _edata = .
+                0x2000001c                __data_end__ = .
 
-.igot.plt       0x2000000c        0x0 load address 0x080011c8
- .igot.plt      0x2000000c        0x0 ./system/src/stm32f4-hal/stm32f4xx_hal.o
+.igot.plt       0x2000001c        0x0 load address 0x080039d8
+ .igot.plt      0x2000001c        0x0 ./system/src/stm32f4-hal/stm32f4xx_hal.o
 
 .bss_CCMRAM     0x10000000        0x0
  *(.bss.CCMRAM .bss.CCMRAM.*)
 
-.bss            0x2000000c      0x118
-                0x2000000c                __bss_start__ = .
-                0x2000000c                _sbss = .
+.bss            0x2000001c       0x50
+                0x2000001c                __bss_start__ = .
+                0x2000001c                _sbss = .
  *(.bss_begin .bss_begin.*)
  *(.bss .bss.*)
  .bss.name.4309
-                0x2000000c        0x1 ./system/src/newlib/_syscalls.o
- *fill*         0x2000000d        0x3 
- .bss.Sys_Task  0x20000010       0xa0 ./src/RTOS/scheduler/Scheduler_prg.o
-                0x20000010                Sys_Task
+                0x2000001c        0x1 ./system/src/newlib/_syscalls.o
  .bss.G_u8SingleFlag
-                0x200000b0        0x1 ./src/MCAL/SYSTICK/SYSTICK_prg.o
- *fill*         0x200000b1        0x3 
- .bss.G_xFptr   0x200000b4        0x4 ./src/MCAL/SYSTICK/SYSTICK_prg.o
- .bss.G_Fptr    0x200000b8       0x40 ./src/MCAL/EXTI/EXTI_prg.o
+                0x2000001d        0x1 ./src/MCAL/SYSTICK/SYSTICK_prg.o
+ *fill*         0x2000001e        0x2 
+ .bss.G_xFptr   0x20000020        0x4 ./src/MCAL/SYSTICK/SYSTICK_prg.o
+ .bss.G_Fptr    0x20000024       0x40 ./src/MCAL/EXTI/EXTI_prg.o
+ .bss.iterator.3856
+                0x20000064        0x4 ./src/APP/main.o
  *(COMMON)
- COMMON         0x200000f8        0x4 ./system/src/stm32f4-hal/stm32f4xx_hal.o
-                0x200000f8                uwTick
- COMMON         0x200000fc       0x28 ./src/RTOS/scheduler/Scheduler_prg.o
-                0x200000fc                TimingTask
+ COMMON         0x20000068        0x4 ./system/src/stm32f4-hal/stm32f4xx_hal.o
+                0x20000068                uwTick
  *(.bss_end .bss_end.*)
-                0x20000124                . = ALIGN (0x4)
-                0x20000124                __bss_end__ = .
-                0x20000124                _ebss = .
+                0x2000006c                . = ALIGN (0x4)
+                0x2000006c                __bss_end__ = .
+                0x2000006c                _ebss = .
 
 .noinit_CCMRAM
  *(.noinit.CCMRAM .noinit.CCMRAM.*)
 
-.noinit         0x20000124        0x0
-                0x20000124                _noinit = .
+.noinit         0x2000006c        0x0
+                0x2000006c                _noinit = .
  *(.noinit .noinit.*)
-                0x20000124                . = ALIGN (0x4)
-                0x20000124                _end_noinit = .
+                0x2000006c                . = ALIGN (0x4)
+                0x2000006c                _end_noinit = .
                 [!provide]                PROVIDE (end, _end_noinit)
                 [!provide]                PROVIDE (_end, _end_noinit)
                 [!provide]                PROVIDE (__end, _end_noinit)
                 [!provide]                PROVIDE (__end__, _end_noinit)
 
-._check_stack   0x20000124      0x100
-                0x20000224                . = (. + _Minimum_Stack_Size)
- *fill*         0x20000124      0x100 
+._check_stack   0x2000006c      0x100
+                0x2000016c                . = (. + _Minimum_Stack_Size)
+ *fill*         0x2000006c      0x100 
 
 .b1text
  *(.b1text)
@@ -1117,11 +1174,11 @@ END GROUP
  .comment       0x0000007e       0x7f ./system/src/cortexm/exception_handlers.o
  .comment       0x0000007e       0x7f ./system/src/cmsis/system_stm32f4xx.o
  .comment       0x0000007e       0x7f ./system/src/cmsis/vectors_stm32f401xc.o
- .comment       0x0000007e       0x7f ./src/RTOS/scheduler/Scheduler_prg.o
  .comment       0x0000007e       0x7f ./src/MCAL/SYSTICK/SYSTICK_prg.o
  .comment       0x0000007e       0x7f ./src/MCAL/RCC/RCC_prg.o
  .comment       0x0000007e       0x7f ./src/MCAL/GPIO/GPIO_prg.o
  .comment       0x0000007e       0x7f ./src/MCAL/EXTI/EXTI_prg.o
+ .comment       0x0000007e       0x7f ./src/HAL/DAC_8bit/DAC_prg.o
  .comment       0x0000007e       0x7f ./src/APP/main.o
  .comment       0x0000007e       0x7f ./src/_initialize_hardware.o
  .comment       0x0000007e       0x7f ./src/stm32f4xx_hal_msp.o
@@ -1151,23 +1208,21 @@ END GROUP
  .ARM.attributes
                 0x000001fe       0x33 ./system/src/cmsis/vectors_stm32f401xc.o
  .ARM.attributes
-                0x00000231       0x33 ./src/RTOS/scheduler/Scheduler_prg.o
+                0x00000231       0x33 ./src/MCAL/SYSTICK/SYSTICK_prg.o
  .ARM.attributes
-                0x00000264       0x33 ./src/MCAL/SYSTICK/SYSTICK_prg.o
+                0x00000264       0x33 ./src/MCAL/RCC/RCC_prg.o
  .ARM.attributes
-                0x00000297       0x33 ./src/MCAL/RCC/RCC_prg.o
+                0x00000297       0x33 ./src/MCAL/GPIO/GPIO_prg.o
  .ARM.attributes
-                0x000002ca       0x33 ./src/MCAL/GPIO/GPIO_prg.o
+                0x000002ca       0x33 ./src/MCAL/EXTI/EXTI_prg.o
  .ARM.attributes
-                0x000002fd       0x33 ./src/MCAL/EXTI/EXTI_prg.o
+                0x000002fd       0x33 ./src/HAL/DAC_8bit/DAC_prg.o
  .ARM.attributes
                 0x00000330       0x33 ./src/APP/main.o
  .ARM.attributes
                 0x00000363       0x33 ./src/_initialize_hardware.o
  .ARM.attributes
                 0x00000396       0x33 ./src/stm32f4xx_hal_msp.o
- .ARM.attributes
-                0x000003c9       0x2e c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-memset.o)
 
 .debug
  *(.debug)
@@ -1181,7 +1236,7 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0x5a0
+.debug_aranges  0x00000000      0x580
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0xb8 ./system/src/stm32f4-hal/stm32f4xx_hal.o
@@ -1206,26 +1261,26 @@ END GROUP
  .debug_aranges
                 0x00000358       0x20 ./system/src/cmsis/vectors_stm32f401xc.o
  .debug_aranges
-                0x00000378       0x48 ./src/RTOS/scheduler/Scheduler_prg.o
+                0x00000378       0x70 ./src/MCAL/SYSTICK/SYSTICK_prg.o
  .debug_aranges
-                0x000003c0       0x68 ./src/MCAL/SYSTICK/SYSTICK_prg.o
+                0x000003e8       0x30 ./src/MCAL/RCC/RCC_prg.o
  .debug_aranges
-                0x00000428       0x30 ./src/MCAL/RCC/RCC_prg.o
+                0x00000418       0x68 ./src/MCAL/GPIO/GPIO_prg.o
  .debug_aranges
-                0x00000458       0x60 ./src/MCAL/GPIO/GPIO_prg.o
+                0x00000480       0x68 ./src/MCAL/EXTI/EXTI_prg.o
  .debug_aranges
-                0x000004b8       0x68 ./src/MCAL/EXTI/EXTI_prg.o
+                0x000004e8       0x28 ./src/HAL/DAC_8bit/DAC_prg.o
  .debug_aranges
-                0x00000520       0x38 ./src/APP/main.o
+                0x00000510       0x28 ./src/APP/main.o
  .debug_aranges
-                0x00000558       0x28 ./src/_initialize_hardware.o
+                0x00000538       0x28 ./src/_initialize_hardware.o
  .debug_aranges
-                0x00000580       0x20 ./src/stm32f4xx_hal_msp.o
+                0x00000560       0x20 ./src/stm32f4xx_hal_msp.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0xab98
+.debug_info     0x00000000     0xaa75
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000     0x1076 ./system/src/stm32f4-hal/stm32f4xx_hal.o
  .debug_info    0x00001076     0x15d1 ./system/src/stm32f4-hal/stm32f4xx_hal_cortex.o
@@ -1238,16 +1293,16 @@ END GROUP
  .debug_info    0x00006884      0xae5 ./system/src/cortexm/exception_handlers.o
  .debug_info    0x00007369      0xcfa ./system/src/cmsis/system_stm32f4xx.o
  .debug_info    0x00008063       0xc6 ./system/src/cmsis/vectors_stm32f401xc.o
- .debug_info    0x00008129      0x324 ./src/RTOS/scheduler/Scheduler_prg.o
- .debug_info    0x0000844d      0x317 ./src/MCAL/SYSTICK/SYSTICK_prg.o
- .debug_info    0x00008764      0x25e ./src/MCAL/RCC/RCC_prg.o
- .debug_info    0x000089c2      0x5b8 ./src/MCAL/GPIO/GPIO_prg.o
- .debug_info    0x00008f7a      0x28a ./src/MCAL/EXTI/EXTI_prg.o
- .debug_info    0x00009204      0x371 ./src/APP/main.o
- .debug_info    0x00009575      0xd30 ./src/_initialize_hardware.o
- .debug_info    0x0000a2a5      0x8f3 ./src/stm32f4xx_hal_msp.o
+ .debug_info    0x00008129      0x364 ./src/MCAL/SYSTICK/SYSTICK_prg.o
+ .debug_info    0x0000848d      0x25e ./src/MCAL/RCC/RCC_prg.o
+ .debug_info    0x000086eb      0x60c ./src/MCAL/GPIO/GPIO_prg.o
+ .debug_info    0x00008cf7      0x28a ./src/MCAL/EXTI/EXTI_prg.o
+ .debug_info    0x00008f81      0x28b ./src/HAL/DAC_8bit/DAC_prg.o
+ .debug_info    0x0000920c      0x246 ./src/APP/main.o
+ .debug_info    0x00009452      0xd30 ./src/_initialize_hardware.o
+ .debug_info    0x0000a182      0x8f3 ./src/stm32f4xx_hal_msp.o
 
-.debug_abbrev   0x00000000     0x256d
+.debug_abbrev   0x00000000     0x250f
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x340 ./system/src/stm32f4-hal/stm32f4xx_hal.o
  .debug_abbrev  0x00000340      0x3d3 ./system/src/stm32f4-hal/stm32f4xx_hal_cortex.o
@@ -1260,38 +1315,38 @@ END GROUP
  .debug_abbrev  0x000014ec      0x1fe ./system/src/cortexm/exception_handlers.o
  .debug_abbrev  0x000016ea      0x213 ./system/src/cmsis/system_stm32f4xx.o
  .debug_abbrev  0x000018fd       0x9a ./system/src/cmsis/vectors_stm32f401xc.o
- .debug_abbrev  0x00001997      0x199 ./src/RTOS/scheduler/Scheduler_prg.o
- .debug_abbrev  0x00001b30      0x1b1 ./src/MCAL/SYSTICK/SYSTICK_prg.o
- .debug_abbrev  0x00001ce1       0xb7 ./src/MCAL/RCC/RCC_prg.o
- .debug_abbrev  0x00001d98      0x183 ./src/MCAL/GPIO/GPIO_prg.o
- .debug_abbrev  0x00001f1b       0xe5 ./src/MCAL/EXTI/EXTI_prg.o
- .debug_abbrev  0x00002000      0x16f ./src/APP/main.o
- .debug_abbrev  0x0000216f      0x238 ./src/_initialize_hardware.o
- .debug_abbrev  0x000023a7      0x1c6 ./src/stm32f4xx_hal_msp.o
+ .debug_abbrev  0x00001997      0x1b1 ./src/MCAL/SYSTICK/SYSTICK_prg.o
+ .debug_abbrev  0x00001b48       0xb7 ./src/MCAL/RCC/RCC_prg.o
+ .debug_abbrev  0x00001bff      0x1ac ./src/MCAL/GPIO/GPIO_prg.o
+ .debug_abbrev  0x00001dab       0xe5 ./src/MCAL/EXTI/EXTI_prg.o
+ .debug_abbrev  0x00001e90      0x127 ./src/HAL/DAC_8bit/DAC_prg.o
+ .debug_abbrev  0x00001fb7      0x15a ./src/APP/main.o
+ .debug_abbrev  0x00002111      0x238 ./src/_initialize_hardware.o
+ .debug_abbrev  0x00002349      0x1c6 ./src/stm32f4xx_hal_msp.o
 
-.debug_line     0x00000000     0x2c82
+.debug_line     0x00000000     0x2780
  *(.debug_line)
- .debug_line    0x00000000      0x419 ./system/src/stm32f4-hal/stm32f4xx_hal.o
- .debug_line    0x00000419      0x496 ./system/src/stm32f4-hal/stm32f4xx_hal_cortex.o
- .debug_line    0x000008af      0x5f6 ./system/src/stm32f4-hal/stm32f4xx_hal_rcc.o
- .debug_line    0x00000ea5      0x2a2 ./system/src/newlib/_exit.o
- .debug_line    0x00001147      0x131 ./system/src/newlib/_startup.o
- .debug_line    0x00001278      0x2bb ./system/src/newlib/_syscalls.o
- .debug_line    0x00001533      0x22f ./system/src/cortexm/_initialize_hardware.o
- .debug_line    0x00001762      0x23b ./system/src/cortexm/_reset_hardware.o
- .debug_line    0x0000199d      0x281 ./system/src/cortexm/exception_handlers.o
- .debug_line    0x00001c1e      0x256 ./system/src/cmsis/system_stm32f4xx.o
- .debug_line    0x00001e74       0x5a ./system/src/cmsis/vectors_stm32f401xc.o
- .debug_line    0x00001ece      0x17d ./src/RTOS/scheduler/Scheduler_prg.o
- .debug_line    0x0000204b      0x172 ./src/MCAL/SYSTICK/SYSTICK_prg.o
- .debug_line    0x000021bd      0x114 ./src/MCAL/RCC/RCC_prg.o
- .debug_line    0x000022d1      0x212 ./src/MCAL/GPIO/GPIO_prg.o
- .debug_line    0x000024e3      0x15e ./src/MCAL/EXTI/EXTI_prg.o
- .debug_line    0x00002641      0x168 ./src/APP/main.o
- .debug_line    0x000027a9      0x2d0 ./src/_initialize_hardware.o
- .debug_line    0x00002a79      0x209 ./src/stm32f4xx_hal_msp.o
+ .debug_line    0x00000000      0x3af ./system/src/stm32f4-hal/stm32f4xx_hal.o
+ .debug_line    0x000003af      0x42c ./system/src/stm32f4-hal/stm32f4xx_hal_cortex.o
+ .debug_line    0x000007db      0x58c ./system/src/stm32f4-hal/stm32f4xx_hal_rcc.o
+ .debug_line    0x00000d67      0x203 ./system/src/newlib/_exit.o
+ .debug_line    0x00000f6a      0x131 ./system/src/newlib/_startup.o
+ .debug_line    0x0000109b      0x21c ./system/src/newlib/_syscalls.o
+ .debug_line    0x000012b7      0x1c5 ./system/src/cortexm/_initialize_hardware.o
+ .debug_line    0x0000147c      0x1d1 ./system/src/cortexm/_reset_hardware.o
+ .debug_line    0x0000164d      0x217 ./system/src/cortexm/exception_handlers.o
+ .debug_line    0x00001864      0x1ec ./system/src/cmsis/system_stm32f4xx.o
+ .debug_line    0x00001a50       0x5a ./system/src/cmsis/vectors_stm32f401xc.o
+ .debug_line    0x00001aaa      0x188 ./src/MCAL/SYSTICK/SYSTICK_prg.o
+ .debug_line    0x00001c32      0x114 ./src/MCAL/RCC/RCC_prg.o
+ .debug_line    0x00001d46      0x247 ./src/MCAL/GPIO/GPIO_prg.o
+ .debug_line    0x00001f8d      0x15e ./src/MCAL/EXTI/EXTI_prg.o
+ .debug_line    0x000020eb      0x151 ./src/HAL/DAC_8bit/DAC_prg.o
+ .debug_line    0x0000223c      0x13f ./src/APP/main.o
+ .debug_line    0x0000237b      0x266 ./src/_initialize_hardware.o
+ .debug_line    0x000025e1      0x19f ./src/stm32f4xx_hal_msp.o
 
-.debug_frame    0x00000000      0xb20
+.debug_frame    0x00000000      0xab4
  *(.debug_frame)
  .debug_frame   0x00000000      0x184 ./system/src/stm32f4-hal/stm32f4xx_hal.o
  .debug_frame   0x00000184      0x138 ./system/src/stm32f4-hal/stm32f4xx_hal_cortex.o
@@ -1304,58 +1359,57 @@ END GROUP
  .debug_frame   0x00000564       0xe0 ./system/src/cortexm/exception_handlers.o
  .debug_frame   0x00000644       0x38 ./system/src/cmsis/system_stm32f4xx.o
  .debug_frame   0x0000067c       0x20 ./system/src/cmsis/vectors_stm32f401xc.o
- .debug_frame   0x0000069c       0xa4 ./src/RTOS/scheduler/Scheduler_prg.o
- .debug_frame   0x00000740       0xdc ./src/MCAL/SYSTICK/SYSTICK_prg.o
- .debug_frame   0x0000081c       0x40 ./src/MCAL/RCC/RCC_prg.o
- .debug_frame   0x0000085c       0xd8 ./src/MCAL/GPIO/GPIO_prg.o
- .debug_frame   0x00000934       0xd0 ./src/MCAL/EXTI/EXTI_prg.o
- .debug_frame   0x00000a04       0x5c ./src/APP/main.o
- .debug_frame   0x00000a60       0x50 ./src/_initialize_hardware.o
- .debug_frame   0x00000ab0       0x50 ./src/stm32f4xx_hal_msp.o
- .debug_frame   0x00000b00       0x20 c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-memset.o)
+ .debug_frame   0x0000069c       0xec ./src/MCAL/SYSTICK/SYSTICK_prg.o
+ .debug_frame   0x00000788       0x40 ./src/MCAL/RCC/RCC_prg.o
+ .debug_frame   0x000007c8       0xe8 ./src/MCAL/GPIO/GPIO_prg.o
+ .debug_frame   0x000008b0       0xd0 ./src/MCAL/EXTI/EXTI_prg.o
+ .debug_frame   0x00000980       0x54 ./src/HAL/DAC_8bit/DAC_prg.o
+ .debug_frame   0x000009d4       0x40 ./src/APP/main.o
+ .debug_frame   0x00000a14       0x50 ./src/_initialize_hardware.o
+ .debug_frame   0x00000a64       0x50 ./src/stm32f4xx_hal_msp.o
 
-.debug_str      0x00000000     0x1f1f
+.debug_str      0x00000000     0x1eb9
  *(.debug_str)
- .debug_str     0x00000000      0xc95 ./system/src/stm32f4-hal/stm32f4xx_hal.o
-                                0xd24 (size before relaxing)
- .debug_str     0x00000c95      0x3a8 ./system/src/stm32f4-hal/stm32f4xx_hal_cortex.o
-                                0xe6c (size before relaxing)
- .debug_str     0x0000103d      0x337 ./system/src/stm32f4-hal/stm32f4xx_hal_rcc.o
-                                0xaad (size before relaxing)
- .debug_str     0x00001374       0x7a ./system/src/newlib/_exit.o
-                                0x5ee (size before relaxing)
- .debug_str     0x000013ee      0x1a3 ./system/src/newlib/_startup.o
-                                0x356 (size before relaxing)
- .debug_str     0x00001591       0x8a ./system/src/newlib/_syscalls.o
-                                0x61f (size before relaxing)
- .debug_str     0x0000161b       0x5e ./system/src/cortexm/_initialize_hardware.o
-                                0x691 (size before relaxing)
- .debug_str     0x00001679       0x28 ./system/src/cortexm/_reset_hardware.o
-                                0x657 (size before relaxing)
- .debug_str     0x000016a1      0x11f ./system/src/cortexm/exception_handlers.o
-                                0x6e7 (size before relaxing)
- .debug_str     0x000017c0       0x31 ./system/src/cmsis/system_stm32f4xx.o
-                                0x776 (size before relaxing)
- .debug_str     0x000017f1       0x59 ./system/src/cmsis/vectors_stm32f401xc.o
-                                0x1d9 (size before relaxing)
- .debug_str     0x0000184a      0x188 ./src/RTOS/scheduler/Scheduler_prg.o
-                                0x2f9 (size before relaxing)
- .debug_str     0x000019d2      0x14d ./src/MCAL/SYSTICK/SYSTICK_prg.o
-                                0x336 (size before relaxing)
- .debug_str     0x00001b1f       0x6a ./src/MCAL/RCC/RCC_prg.o
-                                0x2af (size before relaxing)
- .debug_str     0x00001b89      0x19e ./src/MCAL/GPIO/GPIO_prg.o
-                                0x337 (size before relaxing)
- .debug_str     0x00001d27      0x118 ./src/MCAL/EXTI/EXTI_prg.o
-                                0x2a0 (size before relaxing)
- .debug_str     0x00001e3f       0x72 ./src/APP/main.o
-                                0x291 (size before relaxing)
- .debug_str     0x00001eb1       0x31 ./src/_initialize_hardware.o
-                                0x8a1 (size before relaxing)
- .debug_str     0x00001ee2       0x3d ./src/stm32f4xx_hal_msp.o
-                                0x5f2 (size before relaxing)
+ .debug_str     0x00000000      0xcae ./system/src/stm32f4-hal/stm32f4xx_hal.o
+                                0xd3d (size before relaxing)
+ .debug_str     0x00000cae      0x3a8 ./system/src/stm32f4-hal/stm32f4xx_hal_cortex.o
+                                0xe85 (size before relaxing)
+ .debug_str     0x00001056      0x337 ./system/src/stm32f4-hal/stm32f4xx_hal_rcc.o
+                                0xac6 (size before relaxing)
+ .debug_str     0x0000138d       0x7a ./system/src/newlib/_exit.o
+                                0x607 (size before relaxing)
+ .debug_str     0x00001407      0x1a3 ./system/src/newlib/_startup.o
+                                0x36f (size before relaxing)
+ .debug_str     0x000015aa       0x8a ./system/src/newlib/_syscalls.o
+                                0x638 (size before relaxing)
+ .debug_str     0x00001634       0x5e ./system/src/cortexm/_initialize_hardware.o
+                                0x6aa (size before relaxing)
+ .debug_str     0x00001692       0x28 ./system/src/cortexm/_reset_hardware.o
+                                0x670 (size before relaxing)
+ .debug_str     0x000016ba      0x11f ./system/src/cortexm/exception_handlers.o
+                                0x700 (size before relaxing)
+ .debug_str     0x000017d9       0x31 ./system/src/cmsis/system_stm32f4xx.o
+                                0x78f (size before relaxing)
+ .debug_str     0x0000180a       0x59 ./system/src/cmsis/vectors_stm32f401xc.o
+                                0x1f2 (size before relaxing)
+ .debug_str     0x00001863      0x1c9 ./src/MCAL/SYSTICK/SYSTICK_prg.o
+                                0x357 (size before relaxing)
+ .debug_str     0x00001a2c       0x6a ./src/MCAL/RCC/RCC_prg.o
+                                0x2c8 (size before relaxing)
+ .debug_str     0x00001a96      0x1b2 ./src/MCAL/GPIO/GPIO_prg.o
+                                0x34b (size before relaxing)
+ .debug_str     0x00001c48      0x118 ./src/MCAL/EXTI/EXTI_prg.o
+                                0x2b9 (size before relaxing)
+ .debug_str     0x00001d60       0x6f ./src/HAL/DAC_8bit/DAC_prg.o
+                                0x28a (size before relaxing)
+ .debug_str     0x00001dcf       0x7c ./src/APP/main.o
+                                0x261 (size before relaxing)
+ .debug_str     0x00001e4b       0x31 ./src/_initialize_hardware.o
+                                0x8ba (size before relaxing)
+ .debug_str     0x00001e7c       0x3d ./src/stm32f4xx_hal_msp.o
+                                0x60b (size before relaxing)
 
-.debug_loc      0x00000000     0x1612
+.debug_loc      0x00000000     0x1670
  *(.debug_loc)
  .debug_loc     0x00000000       0x92 ./system/src/stm32f4-hal/stm32f4xx_hal.o
  .debug_loc     0x00000092      0x47a ./system/src/stm32f4-hal/stm32f4xx_hal_cortex.o
@@ -1364,11 +1418,10 @@ END GROUP
  .debug_loc     0x000009b6      0x22d ./system/src/newlib/_startup.o
  .debug_loc     0x00000be3       0x63 ./system/src/newlib/_syscalls.o
  .debug_loc     0x00000c46      0x116 ./system/src/cmsis/system_stm32f4xx.o
- .debug_loc     0x00000d5c      0x17c ./src/RTOS/scheduler/Scheduler_prg.o
- .debug_loc     0x00000ed8       0xb6 ./src/MCAL/SYSTICK/SYSTICK_prg.o
- .debug_loc     0x00000f8e      0x530 ./src/MCAL/GPIO/GPIO_prg.o
- .debug_loc     0x000014be      0x11c ./src/MCAL/EXTI/EXTI_prg.o
- .debug_loc     0x000015da       0x38 ./src/APP/main.o
+ .debug_loc     0x00000d5c       0xb6 ./src/MCAL/SYSTICK/SYSTICK_prg.o
+ .debug_loc     0x00000e12      0x619 ./src/MCAL/GPIO/GPIO_prg.o
+ .debug_loc     0x0000142b      0x11c ./src/MCAL/EXTI/EXTI_prg.o
+ .debug_loc     0x00001547      0x129 ./src/HAL/DAC_8bit/DAC_prg.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -1386,7 +1439,7 @@ END GROUP
  *(.debug_varnames)
 OUTPUT(ARM_Drivers.elf elf32-littlearm)
 
-.debug_ranges   0x00000000      0x770
+.debug_ranges   0x00000000      0x718
  .debug_ranges  0x00000000       0xa8 ./system/src/stm32f4-hal/stm32f4xx_hal.o
  .debug_ranges  0x000000a8      0x128 ./system/src/stm32f4-hal/stm32f4xx_hal_cortex.o
  .debug_ranges  0x000001d0      0x150 ./system/src/stm32f4-hal/stm32f4xx_hal_rcc.o
@@ -1398,11 +1451,11 @@ OUTPUT(ARM_Drivers.elf elf32-littlearm)
  .debug_ranges  0x00000450       0x70 ./system/src/cortexm/exception_handlers.o
  .debug_ranges  0x000004c0       0x18 ./system/src/cmsis/system_stm32f4xx.o
  .debug_ranges  0x000004d8       0x10 ./system/src/cmsis/vectors_stm32f401xc.o
- .debug_ranges  0x000004e8       0x58 ./src/RTOS/scheduler/Scheduler_prg.o
- .debug_ranges  0x00000540       0x88 ./src/MCAL/SYSTICK/SYSTICK_prg.o
- .debug_ranges  0x000005c8       0x20 ./src/MCAL/RCC/RCC_prg.o
- .debug_ranges  0x000005e8       0xc8 ./src/MCAL/GPIO/GPIO_prg.o
- .debug_ranges  0x000006b0       0x58 ./src/MCAL/EXTI/EXTI_prg.o
- .debug_ranges  0x00000708       0x40 ./src/APP/main.o
- .debug_ranges  0x00000748       0x18 ./src/_initialize_hardware.o
- .debug_ranges  0x00000760       0x10 ./src/stm32f4xx_hal_msp.o
+ .debug_ranges  0x000004e8       0x90 ./src/MCAL/SYSTICK/SYSTICK_prg.o
+ .debug_ranges  0x00000578       0x20 ./src/MCAL/RCC/RCC_prg.o
+ .debug_ranges  0x00000598       0xd0 ./src/MCAL/GPIO/GPIO_prg.o
+ .debug_ranges  0x00000668       0x58 ./src/MCAL/EXTI/EXTI_prg.o
+ .debug_ranges  0x000006c0       0x18 ./src/HAL/DAC_8bit/DAC_prg.o
+ .debug_ranges  0x000006d8       0x18 ./src/APP/main.o
+ .debug_ranges  0x000006f0       0x18 ./src/_initialize_hardware.o
+ .debug_ranges  0x00000708       0x10 ./src/stm32f4xx_hal_msp.o
