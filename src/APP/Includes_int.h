@@ -21,12 +21,14 @@
 #include "../HAL/Seven_Segment/Seven_Segment_int.h"
 #include "../MCAL/SYSTICK/SYSTICK_int.h"
 
+#include "../HAL/IR/IR_int.h"
+
+#include "../HAL/S2P/S2P_int.h"
 #include "../HAL/LEDMATRIX/LEDMATRIX_int.h"
-#include "../HAL/LEDMATRIX/LEDMATRIX_cfg.h"
 #include "../HAL/DAC_8bit/DAC_int.h"
 
 #include "../RTOS/scheduler/Scheduler_int.h"
 #include "../RTOS/scheduler/Scheduler_cfg.h"
-
+#include "../MCAL/UART/UART_int.h"
 
 #endif /* APP_INCLUDES_INT_H_ */

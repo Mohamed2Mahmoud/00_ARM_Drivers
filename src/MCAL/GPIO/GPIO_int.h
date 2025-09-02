@@ -133,7 +133,7 @@ void MGPIO_vSetPinPull(u8 A_u8PortId, u8 A_u8PinNo, u8 A_u8PullType);
 void MGPIO_vSetPinValue(u8 A_u8PortId, u8 A_u8PinNo, u8 A_u8Value);
 u8   MGPIO_u8GetPinValue(u8 A_u8PortId, u8 A_u8PinNo);
 void   MGPIO_vTogPinValue(u8 A_u8PortId, u8 A_u8PinNo);
-void MGPIO_vSetAlt(u8 A_u8PortID, u8 A_u8PinNum, u16 A_u16AFx);
+void MGPIO_vSetAlt(u8 A_u8PortId, u8 A_u8PinNo, u8 A_u8AFx);
 void MGPIO_vPinInit(GPIOx_PinConfig_t* A_xPinCfg);
 void MGPIO_vSetPinAtomic(u8 A_u8PortId, u8 A_u8PinNo, u8 A_u8Value);
 

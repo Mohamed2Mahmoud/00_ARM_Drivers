@@ -1,16 +1,6 @@
-/*
- * Seven_Segment.c
- *
- *  Created on: Aug 18, 2025
- *      Author: drago
- */
-
-
 #include "Seven_Segment_int.h"
 
-
-
-u16 NumberConfig[] = {
+static const u8 NumberConfig[] = {
     0b00111111, // 0
     0b00000110, // 1
     0b01011011, // 2
@@ -29,38 +19,33 @@ u16 NumberConfig[] = {
     0b01110001  // F
 };
 
-
-void _7_Segment_Init(Segment_Init_t* SEG){
-    for(int i = 0; i < 8 ; i++){
-        GPIOx_PinConfig_t SevenSegmentPins = {
-            .port = SEG->Port,
-            .pin = SEG->PinNo[i],
+void _7_Segment_Init(Segment_Init_t* seg) {
+    for (int i = 0; i < 8; i++) {
+        GPIOx_PinConfig_t pinCfg = {
+            .port = seg->Port,
+            .pin  = seg->PinNo[i],
             .mode = GPIO_MODE_OUTPUT,
             .outputType = GPIO_PUSHPULL,
-            .speed = GPIO_LOW_SPEED,
-            .pull = GPIO_NOPULL,
-            .altFunc = 0
+            .speed = GPIO_LOW_SPEED
         };
-        MGPIO_vPinInit(&SevenSegmentPins);
+        MGPIO_vPinInit(&pinCfg);
     }
 }
 
+void _7_Segment_Write(Segment_Init_t* seg, u8 value) {
+    if (value > 0x0F) return;  // invalid input
+    u8 pattern = NumberConfig[value];
 
+    for (int i = 0; i < 8; i++) {
+        u8 pinState = (pattern >> i) & 0x01;
+        MGPIO_vSetPinValue(seg->Port, seg->PinNo[i], pinState);
+    }
+}
 
-
-
-
-void DisplayHexNumber(u8 hexValue, Segment_Init_t *LCD1, Segment_Init_t *LCD2) {
+void SEG_DisplayHex(u8 hexValue, Segment_Init_t* seg1, Segment_Init_t* seg2) {
     u8 highNibble = (hexValue >> 4) & 0x0F;
     u8 lowNibble  = hexValue & 0x0F;
 
-    _7_Segment_Write(LCD1, highNibble);
-    _7_Segment_Write(LCD2, lowNibble);
-}
-
-void _7_Segment_Write(Segment_Init_t* SEG, u16 value) {
-    for(int i = 0; i < 8; i++ ){
-        u16 pinState = (NumberConfig[value] >> i) & 0x01;
-        MGPIO_vSetPinValue(SEG->Port, SEG->PinNo[i], pinState);
-    }
+    _7_Segment_Write(seg1, highNibble);
+    _7_Segment_Write(seg2, lowNibble);
 }

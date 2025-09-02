@@ -36,7 +36,7 @@
 // The external clock frequency is specified as a preprocessor definition
 // passed to the compiler via a command line option (see the 'C/C++ General' ->
 // 'Paths and Symbols' -> the 'Symbols' tab, if you want to change it).
-// The value selected during project creation was HSE_VALUE=16000000.
+// The value selected during project creation was HSE_VALUE=25000000.
 //
 // The code to set the clock is at the end.
 //
@@ -123,7 +123,7 @@ SystemClock_Config(void)
   // datasheet.
   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
 
-//#warning "Please check if the SystemClock_Config() settings match your board!"
+#warning "Please check if the SystemClock_Config() settings match your board!"
   // Comment out the warning after checking and updating.
 
   RCC_OscInitTypeDef RCC_OscInitStruct;

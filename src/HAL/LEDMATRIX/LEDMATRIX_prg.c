@@ -1,112 +1,59 @@
 /*
  * LEDMATRIX_prg.c
  *
- *  Created on: Aug 21, 2025
- *      Author: drago
+ *  Created on: Aug 30, 2025
+ *  Author: Mohamed Ismail
+ *  Version: 1.1
  */
 
-#include "../../LIB/BIT_MATH.h"
-#include "../../LIB/STD_TYPES.h"
-#include "../../MCAL/GPIO/GPIO_int.h"
+#include "LEDMATRIX_int.h"
+#include "LEDMATRIX_cfg.h"
+#include "LEDMATRIX_prv.h"
+
 #include "../../MCAL/SYSTICK/SYSTICK_int.h"
-#include "../LEDMATRIX/LEDMATRIX_cfg.h"
-#include "../LEDMATRIX/LEDMATRIX_int.h"
+#include "../../HAL/S2P/S2P_int.h"
 
-static const LEDMATRIX_Config_t *g_cfg = NULL;
 
-static void HLEDMATRIX_vEnableCurrentCol(u8 colNo);
-static void HLEDMATRIX_vDisableAllCol(void);
-static void HLEDMATRIX_SetRowValue(u8 rowValue);
+const S2P_Config_t LEDMATRIX_S2P = {
+    .DataPort     = GPIO_PORTA,
+    .DataPin      = PIN0,
+    .ShiftCLKPort = GPIO_PORTA,
+    .ShiftCLKPin  = PIN1,
+    .LatchCLKPort = GPIO_PORTA,
+    .LatchCLKPin  = PIN2
+};
 
-static void prv_init_output_pin(u8 port, u8 pin)
+
+void LEDMATRIX_vInit(void)
 {
-    GPIOx_PinConfig_t p = {
-        .port       = port,
-        .pin        = pin,
-        .mode       = GPIO_MODE_OUTPUT,
-        .outputType = GPIO_PUSHPULL,
-        .speed      = GPIO_LOW_SPEED,
-        .pull       = GPIO_NOPULL,
-        .altFunc    = 0
-    };
-    MGPIO_vPinInit(&p);
+
+    S2P_vInit((S2P_Config_t *)&LEDMATRIX_S2P);
+
+    u8 clearFrame[8] = {0};
+    LEDMATRIX_vDisplayFrame(clearFrame, 10);
 }
 
-void HLEDMATRIX_vInit(const LEDMATRIX_Config_t *cfg)
+static void LEDMATRIX_vSendRowData(u8 rowMask, u8 colData)
 {
-    if (cfg == NULL) return;
-    g_cfg = cfg;
+    u16 combinedData = ((u16)colData << 8) | (~rowMask & 0xFF);
 
-    // Initialize Rows (active HIGH)
-    for (u8 i = 0; i < NO_ROWS; i++)
-    {
-        prv_init_output_pin(g_cfg->RowPort, g_cfg->RowPins[i]);
-        MGPIO_vSetPinValue(g_cfg->RowPort, g_cfg->RowPins[i], GPIO_LOW);
-    }
-
-    // Initialize Cols (active LOW)
-    for (u8 i = 0; i < NO_COLS; i++)
-    {
-        prv_init_output_pin(g_cfg->ColPort, g_cfg->ColPins[i]);
-        MGPIO_vSetPinValue(g_cfg->ColPort, g_cfg->ColPins[i], GPIO_HIGH);
-    }
-
-    MSYSTICK_Config_t STK_cfg = { .InterruptEnable = INT_DISABLE, .CLK_SRC = CLK_SRC_AHB_8 };
-    MSYSTICK_vInit(&STK_cfg);
+    S2P_SendData((S2P_Config_t *)&LEDMATRIX_S2P, combinedData);
 }
 
-void HLEDMATRIX_vDisplayFrame(const LEDMATRIX_Config_t *cfg, u8 A_u8Frame[8], u8 A_u8FrameDelay)
+void LEDMATRIX_vDisplayColumn(u8 *frame)
 {
-    const LEDMATRIX_Config_t *use = (cfg != NULL) ? cfg : g_cfg;
-    if (use == NULL) return;
-
-    g_cfg = use;
-
-    for (u8 repeat = 0; repeat < A_u8FrameDelay; repeat++)
+    for (u8 row = 0; row < 8; row++)
     {
-        for (u8 col = 0; col < NO_COLS; col++)
-        {
-            HLEDMATRIX_SetRowValue(A_u8Frame[col]);
+        LEDMATRIX_vSendRowData(LEDMATRIX_RowPins[row], frame[row]);
 
-            HLEDMATRIX_vEnableCurrentCol(col);
-
-            MSYSTICK_vSetDelay_ms(SCAN_TIME);
-
-            HLEDMATRIX_vDisableAllCol();
-        }
+        MSYSTICK_vSetDelay_ms(1);
     }
 }
 
-void HLEDMATRIX_DisplayFrame(u8 A_u8Frame[], u32 A_u32FrameDelay)
+void LEDMATRIX_vDisplayFrame(u8 *frame, u16 delay_ms)
 {
-    if (g_cfg == NULL) return;
-    u8 repeats = (A_u32FrameDelay > 255u) ? 255u : (u8)A_u32FrameDelay;
-    HLEDMATRIX_vDisplayFrame(g_cfg, A_u8Frame, repeats);
-}
-
-static void HLEDMATRIX_vEnableCurrentCol(u8 colNo)
-{
-    if (g_cfg == NULL) return;
-    // Active LOW  enable col by driving LOW
-    MGPIO_vSetPinValue(g_cfg->ColPort, g_cfg->ColPins[colNo], GPIO_LOW);
-}
-
-static void HLEDMATRIX_vDisableAllCol(void)
-{
-    if (g_cfg == NULL) return;
-    // Disable all cols by driving HIGH
-    for (u8 i = 0; i < NO_COLS; i++)
-        MGPIO_vSetPinValue(g_cfg->ColPort, g_cfg->ColPins[i], GPIO_HIGH);
-}
-
-static void HLEDMATRIX_SetRowValue(u8 rowValue)
-{
-    if (g_cfg == NULL) return;
-    // Active HIGH  row=1 lights LED
-    for (u8 i = 0; i < NO_ROWS; i++)
+    for (u16 elapsed = 0; elapsed < delay_ms; elapsed++)
     {
-        u8 bit = GET_BIT(rowValue, i);
-        MGPIO_vSetPinValue(g_cfg->RowPort, g_cfg->RowPins[i], bit ? GPIO_HIGH : GPIO_LOW);
+        LEDMATRIX_vDisplayColumn(frame);
     }
 }
-

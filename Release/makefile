@@ -14,8 +14,10 @@ RM := rm -rf
 -include system/src/cortexm/subdir.mk
 -include system/src/cmsis/subdir.mk
 -include src/RTOS/scheduler/subdir.mk
+-include src/MCAL/UART/subdir.mk
 -include src/MCAL/SYSTICK/subdir.mk
 -include src/MCAL/SYSCFG/subdir.mk
+-include src/MCAL/SPI/subdir.mk
 -include src/MCAL/RCC/subdir.mk
 -include src/MCAL/NVIC/subdir.mk
 -include src/MCAL/GPIO/subdir.mk
@@ -25,6 +27,7 @@ RM := rm -rf
 -include src/HAL/S2P/subdir.mk
 -include src/HAL/RGB_LED/subdir.mk
 -include src/HAL/LEDMATRIX/subdir.mk
+-include src/HAL/IR/subdir.mk
 -include src/HAL/DAC_8bit/subdir.mk
 -include src/HAL/Button/subdir.mk
 -include src/APP/subdir.mk

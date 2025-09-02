@@ -1,16 +1,32 @@
-#ifndef HAL_LEDMATRIX_LEDMATRIX_CFG_H_
-#define HAL_LEDMATRIX_LEDMATRIX_CFG_H_
+/*
+ * LEDMATRIX_cfg.h
+ *
+ *  Created on: Aug 21, 2025
+ *      Author: drago
+ *      Version: 0.2
+ */
 
-#include "../../LIB/STD_TYPES.h"
-#include "../../MCAL/GPIO/GPIO_int.h"
-#include "LEDMATRIX_int.h"   // so compiler knows LEDMATRIX_Config_t
+#ifndef SRC_HAL_LEDMATRIX_CFG_H_
+#define SRC_HAL_LEDMATRIX_CFG_H_
 
-#define NO_ROWS     8
-#define NO_COLS     8
 
-#define SCAN_TIME   2.5
 
-/* External configuration struct (defined in .c) */
-extern const LEDMATRIX_Config_t LEDMATRIX_cfg;
+#define SCAN_TIME  2.5  // in ms
 
-#endif /* HAL_LEDMATRIX_LEDMATRIX_CFG_H_ */
+#include "../../HAL/S2P/S2P_int.h"
+
+extern const S2P_Config_t LEDMATRIX_S2P;
+
+
+/* Options:
+ * DIRECT_LEDMATRIX
+ * S2P_CONNECTION
+ */
+#define METHOD  S2P_CONNECTION
+
+
+#define NO_ROWS  8
+#define NO_COLS  8
+
+#endif /* SRC_HAL_LEDMATRIX_CFG_H_ */
+

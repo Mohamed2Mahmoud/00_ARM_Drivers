@@ -30,6 +30,7 @@ SUBDIRS := \
 src/APP \
 src/HAL/Button \
 src/HAL/DAC_8bit \
+src/HAL/IR \
 src/HAL/LEDMATRIX \
 src/HAL/RGB_LED \
 src/HAL/S2P \
@@ -39,8 +40,10 @@ src/MCAL/EXTI \
 src/MCAL/GPIO \
 src/MCAL/NVIC \
 src/MCAL/RCC \
+src/MCAL/SPI \
 src/MCAL/SYSCFG \
 src/MCAL/SYSTICK \
+src/MCAL/UART \
 src/RTOS/scheduler \
 src \
 system/src/cmsis \

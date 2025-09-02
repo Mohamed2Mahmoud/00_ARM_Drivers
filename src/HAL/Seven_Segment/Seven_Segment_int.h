@@ -18,7 +18,7 @@ typedef struct{
 
 
 void _7_Segment_Init(Segment_Init_t* SEG);
-void _7_Segment_Write(Segment_Init_t* SEG,u16 value);
+void _7_Segment_Write(Segment_Init_t* SEG,u8 value);
 void DisplayHexNumber(u8 hexValue, Segment_Init_t *LCD1, Segment_Init_t *LCD2);
 
 

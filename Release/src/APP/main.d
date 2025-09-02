@@ -11,22 +11,28 @@ src/APP/main.o: ../src/APP/main.c ../src/APP/Includes_int.h \
  ../src/APP/../MCAL/EXTI/EXTI_int.h ../src/APP/../MCAL/NVIC/NVIC_int.h \
  ../src/APP/../MCAL/SYSCFG/SYSCFG_int.h \
  ../src/APP/../HAL/Seven_Segment/Seven_Segment_int.h \
- ../src/APP/../HAL/Seven_Segment/../../LIB/STD_TYPES.h \
- ../src/APP/../HAL/Seven_Segment/../../MCAL/GPIO/GPIO_int.h \
- ../src/APP/../MCAL/SYSTICK/SYSTICK_int.h \
+ a:\arm\ projects\arm_drivers\src\lib\std_types.h \
+ a:\arm\ projects\arm_drivers\src\mcal\gpio\gpio_int.h \
+ ../src/APP/../MCAL/SYSTICK/SYSTICK_int.h ../src/APP/../HAL/IR/IR_int.h \
+ ../src/APP/../HAL/IR/../../LIB/STD_TYPES.h \
+ ../src/APP/../HAL/S2P/S2P_int.h \
+ ../src/APP/../HAL/S2P/../../LIB/STD_TYPES.h \
+ ../src/APP/../HAL/S2P/../../LIB/BIT_MATH.h \
+ ../src/APP/../HAL/S2P/../../MCAL/GPIO/GPIO_int.h \
+ ../src/APP/../HAL/S2P/../../MCAL/SYSTICK/SYSTICK_int.h \
  ../src/APP/../HAL/LEDMATRIX/LEDMATRIX_int.h \
- ../src/APP/../HAL/LEDMATRIX/../../LIB/STD_TYPES.h \
- ../src/APP/../HAL/LEDMATRIX/LEDMATRIX_cfg.h \
- ../src/APP/../HAL/LEDMATRIX/../../MCAL/GPIO/GPIO_int.h \
- ../src/APP/../HAL/LEDMATRIX/LEDMATRIX_int.h \
+ a:\arm\ projects\arm_drivers\src\lib\std_types.h \
  ../src/APP/../HAL/DAC_8bit/DAC_int.h \
- ../src/APP/../HAL/DAC_8bit/../../LIB/STD_TYPES.h \
- ../src/APP/../HAL/DAC_8bit/../../LIB/BIT_MATH.h \
- ../src/APP/../HAL/DAC_8bit/../../MCAL/GPIO/GPIO_int.h \
- ../src/APP/../HAL/DAC_8bit/../../MCAL/SYSTICK/SYSTICK_int.h \
+ a:\arm\ projects\arm_drivers\src\lib\std_types.h \
+ a:\arm\ projects\arm_drivers\src\lib\bit_math.h \
+ a:\arm\ projects\arm_drivers\src\mcal\gpio\gpio_int.h \
+ a:\arm\ projects\arm_drivers\src\mcal\systick\systick_int.h \
  ../src/APP/../RTOS/scheduler/Scheduler_int.h \
- ../src/APP/../RTOS/scheduler/../../LIB/STD_TYPES.h \
- ../src/APP/../RTOS/scheduler/Scheduler_cfg.h ../src/APP/sound.h
+ a:\arm\ projects\arm_drivers\src\lib\std_types.h \
+ ../src/APP/../RTOS/scheduler/Scheduler_cfg.h \
+ ../src/APP/../MCAL/UART/UART_int.h \
+ ../src/APP/../MCAL/UART/../../LIB/STD_TYPES.h \
+ ../src/APP/../MCAL/UART/../../LIB/BIT_MATH.h
 
 ../src/APP/Includes_int.h:
 
@@ -60,36 +66,48 @@ src/APP/main.o: ../src/APP/main.c ../src/APP/Includes_int.h \
 
 ../src/APP/../HAL/Seven_Segment/Seven_Segment_int.h:
 
-../src/APP/../HAL/Seven_Segment/../../LIB/STD_TYPES.h:
+a:\arm\ projects\arm_drivers\src\lib\std_types.h:
 
-../src/APP/../HAL/Seven_Segment/../../MCAL/GPIO/GPIO_int.h:
+a:\arm\ projects\arm_drivers\src\mcal\gpio\gpio_int.h:
 
 ../src/APP/../MCAL/SYSTICK/SYSTICK_int.h:
 
+../src/APP/../HAL/IR/IR_int.h:
+
+../src/APP/../HAL/IR/../../LIB/STD_TYPES.h:
+
+../src/APP/../HAL/S2P/S2P_int.h:
+
+../src/APP/../HAL/S2P/../../LIB/STD_TYPES.h:
+
+../src/APP/../HAL/S2P/../../LIB/BIT_MATH.h:
+
+../src/APP/../HAL/S2P/../../MCAL/GPIO/GPIO_int.h:
+
+../src/APP/../HAL/S2P/../../MCAL/SYSTICK/SYSTICK_int.h:
+
 ../src/APP/../HAL/LEDMATRIX/LEDMATRIX_int.h:
 
-../src/APP/../HAL/LEDMATRIX/../../LIB/STD_TYPES.h:
-
-../src/APP/../HAL/LEDMATRIX/LEDMATRIX_cfg.h:
-
-../src/APP/../HAL/LEDMATRIX/../../MCAL/GPIO/GPIO_int.h:
-
-../src/APP/../HAL/LEDMATRIX/LEDMATRIX_int.h:
+a:\arm\ projects\arm_drivers\src\lib\std_types.h:
 
 ../src/APP/../HAL/DAC_8bit/DAC_int.h:
 
-../src/APP/../HAL/DAC_8bit/../../LIB/STD_TYPES.h:
+a:\arm\ projects\arm_drivers\src\lib\std_types.h:
 
-../src/APP/../HAL/DAC_8bit/../../LIB/BIT_MATH.h:
+a:\arm\ projects\arm_drivers\src\lib\bit_math.h:
 
-../src/APP/../HAL/DAC_8bit/../../MCAL/GPIO/GPIO_int.h:
+a:\arm\ projects\arm_drivers\src\mcal\gpio\gpio_int.h:
 
-../src/APP/../HAL/DAC_8bit/../../MCAL/SYSTICK/SYSTICK_int.h:
+a:\arm\ projects\arm_drivers\src\mcal\systick\systick_int.h:
 
 ../src/APP/../RTOS/scheduler/Scheduler_int.h:
 
-../src/APP/../RTOS/scheduler/../../LIB/STD_TYPES.h:
+a:\arm\ projects\arm_drivers\src\lib\std_types.h:
 
 ../src/APP/../RTOS/scheduler/Scheduler_cfg.h:
 
-../src/APP/sound.h:
+../src/APP/../MCAL/UART/UART_int.h:
+
+../src/APP/../MCAL/UART/../../LIB/STD_TYPES.h:
+
+../src/APP/../MCAL/UART/../../LIB/BIT_MATH.h:

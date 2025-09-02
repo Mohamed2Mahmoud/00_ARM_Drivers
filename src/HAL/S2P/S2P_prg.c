@@ -49,22 +49,28 @@ void S2P_vInit(S2P_Config_t* S2P_cfg){
 
 
 }
-void S2P_ShiftData(S2P_Config_t* S2P_cfg,u32 A_u32Byte){
-
-	MGPIO_vSetPinValue(S2P_cfg->ShiftCLKPort,S2P_cfg->ShiftCLKPin,GPIO_HIGH);
-	MSYSTICK_vSetDelay_ms(1);
-	MGPIO_vSetPinValue(S2P_cfg->ShiftCLKPort,S2P_cfg->ShiftCLKPin,GPIO_LOW);
+void S2P_ShiftData(S2P_Config_t* S2P_cfg){
+	    // Pulse the shift clock
+	    MGPIO_vSetPinValue(S2P_cfg->ShiftCLKPort, S2P_cfg->ShiftCLKPin, GPIO_HIGH);
+	    MSYSTICK_vSetDelay_ms(S2P_CLOCK_PULSE_DELAY_MS);
+	    MGPIO_vSetPinValue(S2P_cfg->ShiftCLKPort, S2P_cfg->ShiftCLKPin, GPIO_LOW);
 
 }
-void S2P_LatchData(S2P_Config_t* S2P_cfg,u32 A_u32Byte){
+void S2P_LatchData(S2P_Config_t* S2P_cfg){
 
 	MGPIO_vSetPinValue(S2P_cfg->LatchCLKPort,S2P_cfg->LatchCLKPin,GPIO_HIGH);
-	MSYSTICK_vSetDelay_ms(1);
+	MSYSTICK_vSetDelay_ms(S2P_CLOCK_PULSE_DELAY_MS);
 	MGPIO_vSetPinValue(S2P_cfg->LatchCLKPort,S2P_cfg->LatchCLKPin,GPIO_LOW);
 
 }
 
-void S2P_SendData(S2P_Config_t* S2P_cfg,u32 A_u32Byte){
-
-
+void S2P_SendData(S2P_Config_t *cfg, u32 data)
+{
+    for (u8 i = 0; i < 8 * S2P_NO_OF_SHIFT_GEG; i++)
+    {
+        MGPIO_vSetPinValue(cfg->DataPort, cfg->DataPin, GET_BIT(data, i));
+        S2P_ShiftData(cfg);
+    }
+    S2P_LatchData(cfg);
 }
+

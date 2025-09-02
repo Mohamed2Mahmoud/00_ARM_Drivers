@@ -196,7 +196,7 @@ u8 MGPIO_u8GetPinValue(u8 A_u8PortId, u8 A_u8PinNo) {
 
 
 
-void MGPIO_vSetAlt(u8 A_u8PortId, u8 A_u8PinNo, u16 A_u16AFx)
+void MGPIO_vSetAlt(u8 A_u8PortId, u8 A_u8PinNo, u8 A_u8AFx)
 {
     GPIOx_MemMap_t* GPIOx = NULL;
 
@@ -225,10 +225,10 @@ void MGPIO_vSetAlt(u8 A_u8PortId, u8 A_u8PinNo, u16 A_u16AFx)
 
         if (A_u8PinNo <= 7) {
             GPIOx->AFRL &= ~(0xF << (A_u8PinNo * 4));      // Clear
-            GPIOx->AFRL |=  ((A_u16AFx & 0xF) << (A_u8PinNo * 4)); // Set
+            GPIOx->AFRL |=  ((A_u8AFx & 0xF) << (A_u8PinNo * 4)); // Set
         } else if(A_u8PinNo >= 8 && A_u8PinNo < 16){
             GPIOx->AFRH &= ~(0xF << ((A_u8PinNo - 8) * 4));
-            GPIOx->AFRH |=  ((A_u16AFx & 0xF) << ((A_u8PinNo - 8) * 4));
+            GPIOx->AFRH |=  ((A_u8AFx & 0xF) << ((A_u8PinNo - 8) * 4));
         }
     }
 }

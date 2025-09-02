@@ -1,39 +1,120 @@
-// ../APP/main.c
-
-
-
 #include "Includes_int.h"
-#include "sound.h"
-void DAC_Handler(void);
-DAC_Config_t DAC = { .Port = GPIO_PORTA, .pin = { PIN0, PIN1, PIN2, PIN3, PIN4,
-		PIN5, PIN6, PIN7 } };
 
-int main(void) {
+
+/*GPIOx_PinConfig_t tx = {
+		.port = GPIO_PORTA,
+		.pin = PIN9,
+		.mode = GPIO_MODE_ALTFUNC,
+		.altFunc = GPIO_AF7_USART1_USART2
+};
+
+GPIOx_PinConfig_t rx = {
+		.port = GPIO_PORTA,
+		.pin = PIN10,
+		.mode = GPIO_MODE_ALTFUNC,
+		.altFunc = GPIO_AF7_USART1_USART2
+};
+
+GPIOx_PinConfig_t led = {
+		.port = GPIO_PORTA,
+		.pin = PIN1,
+		.mode = GPIO_MODE_OUTPUT,
+		.speed = GPIO_LOW_SPEED,
+		.outputType = GPIO_PUSHPULL,
+		.pull = GPIO_PULLDOWN
+};
+
+
+
+int main(void){
 	MRCC_vInit();
-	MRCC_vEnableClk(RCC_AHB1, GPIO_PORTA);
+	MRCC_vEnableClk(RCC_AHB1,RCC_GPIOA);
+	MRCC_vEnableClk(RCC_APB2,RCC_USART1);
+	USART_vInit();
+	MGPIO_vPinInit(&tx);
+	MGPIO_vPinInit(&rx);
+	MGPIO_vPinInit(&led);
 
-	HDAC_vInit(&DAC);
-	MSYSTICK_vSetInterval_Multi(391, DAC_Handler);
 
-	while (1) {
+	USART_vSendData('A');
 
+
+
+	if(USART_u8ReiceiveData()=='A'){
+		MGPIO_vSetPinValue(GPIO_PORTA,PIN1,GPIO_HIGH);
 	}
 
+	while(1){
+
+	}
+  return 0;
 }
 
-void DAC_Handler (void)
+*/
+
+volatile u8 currentNum = 0;
+
+Segment_Init_t SEG1 = {
+    .Port = GPIO_PORTA,
+    .PinNo = {1,2,3,4,5,6,7,8}   // Example pins, adjust to your wiring
+};
+
+Segment_Init_t SEG2 = {
+    .Port = GPIO_PORTB,
+    .PinNo = {0,1,2,3,4,5,6,7}   // Example pins, adjust to your wiring
+};
+
+static void onIrCode(u8 code)
 {
+    switch(code)
+    {
+        case IR_CODE_0: currentNum = 0; break;
+        case IR_CODE_1: currentNum = 1; break;
+        case IR_CODE_2: currentNum = 2; break;
+        case IR_CODE_3: currentNum = 3; break;
+        case IR_CODE_4: currentNum = 4; break;
+        case IR_CODE_5: currentNum = 5; break;
+        case IR_CODE_6: currentNum = 6; break;
+        case IR_CODE_7: currentNum = 7; break;
+        case IR_CODE_8: currentNum = 8; break;
+        case IR_CODE_9: currentNum = 9; break;
 
-	static u32 iterator = 0;
-	HDAC_vSend(&DAC,new_raw, iterator);
+        case IR_CODE_PLUS:
+            currentNum = (currentNum + 1) % 10;
+            break;
 
-	if (iterator < new_raw_len)
-	{
-		iterator++;
-	}else
-	{
-		iterator = 0;
-	}
+        case IR_CODE_MINUS:
+            currentNum = (currentNum == 0) ? 9 : currentNum - 1;
+            break;
+    }
 
+    _7_Segment_Write(&SEG1, currentNum);
 }
+
+int main(void)
+{
+    MRCC_vInit();
+    MRCC_vEnableClk(RCC_AHB1, GPIO_PORTA);
+    MRCC_vEnableClk(RCC_AHB1, GPIO_PORTB);
+    MRCC_vEnableClk(RCC_APB2, 14);
+
+
+    _7_Segment_Init(&SEG1);
+    _7_Segment_Init(&SEG2);
+
+    MSYSTICK_Config_t stk = {.InterruptEnable = INT_ENABLE, .CLK_SRC = CLK_SRC_AHB_8};
+    MSYSTICK_vInit(&stk);
+
+    IR_Init(onIrCode);
+
+    _7_Segment_Write(&SEG1, currentNum);
+
+    while(1) { }
+}
+
+
+
+
+
+
 
