@@ -1,9 +1,5 @@
 #include "Includes_int.h"
 
-
-
-
-
 int main(void){
 	MRCC_vInit();
 	MRCC_vEnableClk(RCC_AHB1,RCC_GPIOA);
@@ -69,6 +65,56 @@ int main(void){
 }
 
 
+/*GPIOx_PinConfig_t tx = {
+		.port = GPIO_PORTA,
+		.pin = PIN9,
+		.mode = GPIO_MODE_ALTFUNC,
+		.altFunc = GPIO_AF7_USART1_USART2
+};
+
+GPIOx_PinConfig_t rx = {
+		.port = GPIO_PORTA,
+		.pin = PIN10,
+		.mode = GPIO_MODE_ALTFUNC,
+		.altFunc = GPIO_AF7_USART1_USART2
+};
+
+GPIOx_PinConfig_t led = {
+		.port = GPIO_PORTA,
+		.pin = PIN1,
+		.mode = GPIO_MODE_OUTPUT,
+		.speed = GPIO_LOW_SPEED,
+		.outputType = GPIO_PUSHPULL,
+		.pull = GPIO_PULLDOWN
+};
+
+
+
+int main(void){
+	MRCC_vInit();
+	MRCC_vEnableClk(RCC_AHB1,RCC_GPIOA);
+	MRCC_vEnableClk(RCC_APB2,RCC_USART1);
+	USART_vInit();
+	MGPIO_vPinInit(&tx);
+	MGPIO_vPinInit(&rx);
+	MGPIO_vPinInit(&led);
+
+
+	USART_vSendData('A');
+
+
+
+	if(USART_u8ReiceiveData()=='A'){
+		MGPIO_vSetPinValue(GPIO_PORTA,PIN1,GPIO_HIGH);
+	}
+
+	while(1){
+
+	}
+  return 0;
+}
+
+*/
 /*
 volatile u8 currentNum = 0;
 
@@ -130,8 +176,69 @@ int main(void)
     while(1) { }
 }
 
+*/
+
+/*
+#define DELAY_MS(d) do{unsigned int i = d*4000; while(i--){asm("nop");} }while(0)
+
+GPIOx_PinConfig_t tx = {
+		.port = GPIO_PORTA,
+		.pin = PIN9,
+		.mode = GPIO_MODE_ALTFUNC,
+		.altFunc = GPIO_AF7_USART1_USART2
+};
+
+GPIOx_PinConfig_t rx = {
+		.port = GPIO_PORTA,
+		.pin = PIN10,
+		.mode = GPIO_MODE_ALTFUNC,
+		.altFunc = GPIO_AF7_USART1_USART2
+};
+
+GPIOx_PinConfig_t led = {
+		.port = GPIO_PORTA,
+		.pin = PIN1,
+		.mode = GPIO_MODE_OUTPUT,
+		.speed = GPIO_LOW_SPEED,
+		.outputType = GPIO_PUSHPULL,
+		.pull = GPIO_PULLDOWN
+};
+
+
+
+int main(void){
+	MRCC_vInit();
+	MRCC_vEnableClk(RCC_AHB1,RCC_GPIOA);
+	MRCC_vEnableClk(RCC_APB2,RCC_USART1);
+	USART_vInit();
+	MGPIO_vPinInit(&tx);
+	MGPIO_vPinInit(&rx);
+	MGPIO_vPinInit(&led);
+
+
+
+	while(1){
+		USART_vSendData('A');
+		USART_vSendData('B');
+		USART_vSendData('C');
+		USART_vSendData('D');
+		USART_vSendData('E');
+		USART_vSendData('F');
+		DELAY_MS(2500);
+		//if(USART_u8ReiceiveData()=='A'){MGPIO_vSetPinValue(GPIO_PORTA,PIN1,GPIO_HIGH);}
+	}
+  return 0;
+}
+
 
 */
+
+
+
+
+
+
+
 
 
 

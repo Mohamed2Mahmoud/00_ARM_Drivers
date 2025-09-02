@@ -1,3 +1,5 @@
+
+
 /*
  * UART_prg.c
  *
@@ -9,8 +11,9 @@
 #include "UART_int.h"
 #include "UART_prv.h"
 
+//================= USART1 Functions =================//
 
-void USART1_vInit(void)
+void USART_vInit(void)
 {
     // 1) Oversampling = 16
     CLR_BIT(USART1->CR1, USART_OVER8);
@@ -36,7 +39,7 @@ void USART1_vInit(void)
     SET_BIT(USART1->CR1, USART_UE);
 }
 
-void USART1_vSendData(u8 A_u8Data)
+void USART_vSendData(u8 A_u8Data)
 {
     // Wait until TXE flag is set
     while (!GET_BIT(USART1->SR, USART_TXE_FLAG));
@@ -51,7 +54,7 @@ void USART1_vSendData(u8 A_u8Data)
     CLR_BIT(USART1->SR, USART_TC_FLAG);
 }
 
-u8 USART1_u8ReceiveData(void)
+u8 USART_u8ReceiveData(void)
 {
     // Wait until RXNE flag is set
     while (!GET_BIT(USART1->SR, USART_RXNE_FLAG));
@@ -59,3 +62,5 @@ u8 USART1_u8ReceiveData(void)
     // Return received data
     return (u8)USART1->DR;
 }
+
+

@@ -2,7 +2,7 @@
  * UART_int.h
  *
  *  Created on: Aug 31, 2025
- *      Author: Ahmed
+ *      Author: drago
  */
 
 #ifndef APP_MCAL_UART_UART_INT_H_
@@ -26,30 +26,24 @@
 #define USART_STOP_BITS_POS    12    // Stop bits position [13:12]
 
 // SR
-#define USART_TXE_FLAG     7   // Transmit Data Register Empty
-#define USART_TC_FLAG      6   // Transmission Complete
-#define USART_RXNE_FLAG    5   // Receive Data Register Not Empty
+#define USART_TXE_FLAG     7
+#define USART_TC_FLAG      6
+#define USART_RXNE_FLAG    5
 
-//================= Baud Rate Config =================//
-// Example: 9600 baud @ 26 MHz PCLK2
-#define USART1_BRR_VALUE   ((162 << 4) | 13)
+#define USART1_BRR_VALUE   2500
 
-//================= Stop Bit Options =================//
 #define USART_STOPBITS_1        (0x0U << USART_STOP_BITS_POS)  // 00
 #define USART_STOPBITS_0_5      (0x1U << USART_STOP_BITS_POS)  // 01
 #define USART_STOPBITS_2        (0x2U << USART_STOP_BITS_POS)  // 10
 #define USART_STOPBITS_1_5      (0x3U << USART_STOP_BITS_POS)  // 11
 
-//================= Parity Options =================//
-#define USART_PARITY_NONE       (0U)                  // PCE=0
-#define USART_PARITY_EVEN       (1U << USART_PCE)     // PCE=1, PS=0
+#define USART_PARITY_NONE       (0U)
+#define USART_PARITY_EVEN       (1U << USART_PCE)
 #define USART_PARITY_ODD        ((1U << USART_PCE) | (1U << USART_PS))
 
-//================= Word Length Options =================//
 #define USART_WORDLEN_8         (0U << USART_M)
 #define USART_WORDLEN_9         (1U << USART_M)
 
-//================= Oversampling Options =================//
 #define USART_OVERSAMPLE_16     (0U << USART_OVER8)
 #define USART_OVERSAMPLE_8      (1U << USART_OVER8)
 

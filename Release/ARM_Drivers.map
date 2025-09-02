@@ -1,15 +1,15 @@
 Archive member included to satisfy reference by file (symbol)
 
-c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a(_arm_addsubsf3.o)
+c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a(_arm_addsubsf3.o)
                               ./src/HAL/IR/IR_prg.o (__aeabi_ui2f)
-c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a(_arm_muldivsf3.o)
+c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a(_arm_muldivsf3.o)
                               ./src/HAL/IR/IR_prg.o (__aeabi_fdiv)
-c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a(_arm_fixunssfsi.o)
+c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a(_arm_fixunssfsi.o)
                               ./src/HAL/IR/IR_prg.o (__aeabi_f2uiz)
-c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-errno.o)
+c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-errno.o)
                               ./system/src/newlib/_sbrk.o (__errno)
-c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-impure.o)
-                              c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-errno.o) (_impure_ptr)
+c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-impure.o)
+                              c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-errno.o) (_impure_ptr)
 
 Allocating common symbols
 Common symbol       size              file
@@ -400,7 +400,7 @@ Discarded input sections
                 0x00000000       0x48 ./src/RTOS/scheduler/Scheduler_prg.o
  .debug_ranges  0x00000000       0x58 ./src/RTOS/scheduler/Scheduler_prg.o
  .debug_line    0x00000000      0x17c ./src/RTOS/scheduler/Scheduler_prg.o
- .debug_str     0x00000000      0x325 ./src/RTOS/scheduler/Scheduler_prg.o
+ .debug_str     0x00000000      0x30c ./src/RTOS/scheduler/Scheduler_prg.o
  .comment       0x00000000       0x7f ./src/RTOS/scheduler/Scheduler_prg.o
  .debug_frame   0x00000000       0xa4 ./src/RTOS/scheduler/Scheduler_prg.o
  .ARM.attributes
@@ -409,11 +409,11 @@ Discarded input sections
  .text          0x00000000        0x0 ./src/MCAL/UART/UART_prg.o
  .data          0x00000000        0x0 ./src/MCAL/UART/UART_prg.o
  .bss           0x00000000        0x0 ./src/MCAL/UART/UART_prg.o
- .text.USART1_vInit
+ .text.USART_vInit
                 0x00000000       0x4c ./src/MCAL/UART/UART_prg.o
- .text.USART1_vSendData
+ .text.USART_vSendData
                 0x00000000       0x20 ./src/MCAL/UART/UART_prg.o
- .text.USART1_u8ReceiveData
+ .text.USART_u8ReceiveData
                 0x00000000       0x14 ./src/MCAL/UART/UART_prg.o
  .debug_info    0x00000000      0x122 ./src/MCAL/UART/UART_prg.o
  .debug_abbrev  0x00000000       0xbf ./src/MCAL/UART/UART_prg.o
@@ -421,7 +421,7 @@ Discarded input sections
                 0x00000000       0x30 ./src/MCAL/UART/UART_prg.o
  .debug_ranges  0x00000000       0x20 ./src/MCAL/UART/UART_prg.o
  .debug_line    0x00000000       0xc5 ./src/MCAL/UART/UART_prg.o
- .debug_str     0x00000000      0x1e1 ./src/MCAL/UART/UART_prg.o
+ .debug_str     0x00000000      0x1c5 ./src/MCAL/UART/UART_prg.o
  .comment       0x00000000       0x7f ./src/MCAL/UART/UART_prg.o
  .debug_frame   0x00000000       0x40 ./src/MCAL/UART/UART_prg.o
  .ARM.attributes
@@ -617,7 +617,7 @@ Discarded input sections
                 0x00000000       0x38 ./src/HAL/S2P/S2P_prg.o
  .debug_ranges  0x00000000       0x28 ./src/HAL/S2P/S2P_prg.o
  .debug_line    0x00000000      0x14c ./src/HAL/S2P/S2P_prg.o
- .debug_str     0x00000000      0x2ac ./src/HAL/S2P/S2P_prg.o
+ .debug_str     0x00000000      0x293 ./src/HAL/S2P/S2P_prg.o
  .comment       0x00000000       0x7f ./src/HAL/S2P/S2P_prg.o
  .debug_frame   0x00000000       0x90 ./src/HAL/S2P/S2P_prg.o
  .ARM.attributes
@@ -660,8 +660,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x30 ./src/HAL/LEDMATRIX/LEDMATRIX_prg.o
  .debug_ranges  0x00000000       0x68 ./src/HAL/LEDMATRIX/LEDMATRIX_prg.o
- .debug_line    0x00000000      0x170 ./src/HAL/LEDMATRIX/LEDMATRIX_prg.o
- .debug_str     0x00000000      0x2da ./src/HAL/LEDMATRIX/LEDMATRIX_prg.o
+ .debug_line    0x00000000      0x167 ./src/HAL/LEDMATRIX/LEDMATRIX_prg.o
+ .debug_str     0x00000000      0x2c1 ./src/HAL/LEDMATRIX/LEDMATRIX_prg.o
  .comment       0x00000000       0x7f ./src/HAL/LEDMATRIX/LEDMATRIX_prg.o
  .debug_frame   0x00000000       0x64 ./src/HAL/LEDMATRIX/LEDMATRIX_prg.o
  .ARM.attributes
@@ -688,8 +688,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x40 ./src/HAL/IR/IR_prg.o
  .debug_ranges  0x00000000       0x88 ./src/HAL/IR/IR_prg.o
- .debug_line    0x00000000      0x211 ./src/HAL/IR/IR_prg.o
- .debug_str     0x00000000      0x35c ./src/HAL/IR/IR_prg.o
+ .debug_line    0x00000000      0x20d ./src/HAL/IR/IR_prg.o
+ .debug_str     0x00000000      0x343 ./src/HAL/IR/IR_prg.o
  .comment       0x00000000       0x7f ./src/HAL/IR/IR_prg.o
  .debug_frame   0x00000000       0xa0 ./src/HAL/IR/IR_prg.o
  .ARM.attributes
@@ -709,7 +709,7 @@ Discarded input sections
                 0x00000000       0x28 ./src/HAL/DAC_8bit/DAC_prg.o
  .debug_ranges  0x00000000       0x18 ./src/HAL/DAC_8bit/DAC_prg.o
  .debug_line    0x00000000      0x151 ./src/HAL/DAC_8bit/DAC_prg.o
- .debug_str     0x00000000      0x28a ./src/HAL/DAC_8bit/DAC_prg.o
+ .debug_str     0x00000000      0x271 ./src/HAL/DAC_8bit/DAC_prg.o
  .comment       0x00000000       0x7f ./src/HAL/DAC_8bit/DAC_prg.o
  .debug_frame   0x00000000       0x54 ./src/HAL/DAC_8bit/DAC_prg.o
  .ARM.attributes
@@ -747,7 +747,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x18 ./src/APP/main_olddd.o
  .debug_line    0x00000000       0x59 ./src/APP/main_olddd.o
- .debug_str     0x00000000      0x1a8 ./src/APP/main_olddd.o
+ .debug_str     0x00000000      0x18f ./src/APP/main_olddd.o
  .comment       0x00000000       0x7f ./src/APP/main_olddd.o
  .ARM.attributes
                 0x00000000       0x33 ./src/APP/main_olddd.o
@@ -755,7 +755,7 @@ Discarded input sections
  .data          0x00000000        0x0 ./src/APP/old_mains.o
  .bss           0x00000000        0x0 ./src/APP/old_mains.o
  .debug_line    0x00000000        0x0 ./src/APP/old_mains.o
- .debug_str     0x00000000      0x12c ./src/APP/old_mains.o
+ .debug_str     0x00000000      0x113 ./src/APP/old_mains.o
  .comment       0x00000000       0x7f ./src/APP/old_mains.o
  .ARM.attributes
                 0x00000000       0x33 ./src/APP/old_mains.o
@@ -771,42 +771,42 @@ Discarded input sections
                 0x00000000        0x2 ./src/stm32f4xx_hal_msp.o
  .text.HAL_PPP_MspDeInit
                 0x00000000        0x2 ./src/stm32f4xx_hal_msp.o
- .text          0x00000000      0x21c c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a(_arm_addsubsf3.o)
- .data          0x00000000        0x0 c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a(_arm_addsubsf3.o)
- .bss           0x00000000        0x0 c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a(_arm_addsubsf3.o)
- .debug_frame   0x00000000       0x4c c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a(_arm_addsubsf3.o)
+ .text          0x00000000      0x21c c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a(_arm_addsubsf3.o)
+ .data          0x00000000        0x0 c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a(_arm_addsubsf3.o)
+ .bss           0x00000000        0x0 c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a(_arm_addsubsf3.o)
+ .debug_frame   0x00000000       0x4c c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a(_arm_addsubsf3.o)
  .ARM.attributes
-                0x00000000       0x1e c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a(_arm_addsubsf3.o)
- .text          0x00000000      0x2a0 c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a(_arm_muldivsf3.o)
- .data          0x00000000        0x0 c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a(_arm_muldivsf3.o)
- .bss           0x00000000        0x0 c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a(_arm_muldivsf3.o)
- .debug_frame   0x00000000       0x38 c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a(_arm_muldivsf3.o)
+                0x00000000       0x1e c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a(_arm_addsubsf3.o)
+ .text          0x00000000      0x2a0 c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a(_arm_muldivsf3.o)
+ .data          0x00000000        0x0 c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a(_arm_muldivsf3.o)
+ .bss           0x00000000        0x0 c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a(_arm_muldivsf3.o)
+ .debug_frame   0x00000000       0x38 c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a(_arm_muldivsf3.o)
  .ARM.attributes
-                0x00000000       0x1e c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a(_arm_muldivsf3.o)
- .text          0x00000000       0x40 c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a(_arm_fixunssfsi.o)
- .data          0x00000000        0x0 c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a(_arm_fixunssfsi.o)
- .bss           0x00000000        0x0 c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a(_arm_fixunssfsi.o)
- .debug_frame   0x00000000       0x24 c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a(_arm_fixunssfsi.o)
+                0x00000000       0x1e c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a(_arm_muldivsf3.o)
+ .text          0x00000000       0x40 c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a(_arm_fixunssfsi.o)
+ .data          0x00000000        0x0 c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a(_arm_fixunssfsi.o)
+ .bss           0x00000000        0x0 c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a(_arm_fixunssfsi.o)
+ .debug_frame   0x00000000       0x24 c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a(_arm_fixunssfsi.o)
  .ARM.attributes
-                0x00000000       0x1e c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a(_arm_fixunssfsi.o)
- .text          0x00000000        0x0 c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-errno.o)
- .data          0x00000000        0x0 c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-errno.o)
- .bss           0x00000000        0x0 c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-errno.o)
- .text.__errno  0x00000000        0xc c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-errno.o)
- .debug_frame   0x00000000       0x20 c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-errno.o)
+                0x00000000       0x1e c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a(_arm_fixunssfsi.o)
+ .text          0x00000000        0x0 c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-errno.o)
+ .data          0x00000000        0x0 c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-errno.o)
+ .bss           0x00000000        0x0 c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-errno.o)
+ .text.__errno  0x00000000        0xc c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-errno.o)
+ .debug_frame   0x00000000       0x20 c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-errno.o)
  .ARM.attributes
-                0x00000000       0x2e c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-errno.o)
- .text          0x00000000        0x0 c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-impure.o)
- .data          0x00000000        0x0 c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-impure.o)
- .bss           0x00000000        0x0 c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-impure.o)
+                0x00000000       0x2e c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-errno.o)
+ .text          0x00000000        0x0 c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-impure.o)
+ .data          0x00000000        0x0 c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-impure.o)
+ .bss           0x00000000        0x0 c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-impure.o)
  .data._impure_ptr
-                0x00000000        0x4 c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-impure.o)
+                0x00000000        0x4 c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-impure.o)
  .data.impure_data
-                0x00000000       0x60 c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-impure.o)
+                0x00000000       0x60 c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-impure.o)
  .rodata._global_impure_ptr
-                0x00000000        0x4 c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-impure.o)
+                0x00000000        0x4 c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-impure.o)
  .ARM.attributes
-                0x00000000       0x2e c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-impure.o)
+                0x00000000       0x2e c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a(lib_a-impure.o)
 
 Memory Configuration
 
@@ -866,16 +866,16 @@ LOAD ./src/APP/main_olddd.o
 LOAD ./src/APP/old_mains.o
 LOAD ./src/_initialize_hardware.o
 LOAD ./src/stm32f4xx_hal_msp.o
-LOAD c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libstdc++_nano.a
-LOAD c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libm.a
+LOAD c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libstdc++_nano.a
+LOAD c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libm.a
 START GROUP
-LOAD c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a
-LOAD c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a
-LOAD c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a
+LOAD c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a
+LOAD c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libg_nano.a
+LOAD c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a
 END GROUP
 START GROUP
-LOAD c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a
-LOAD c:/users/koshok/desktop/arm tools/imt_sdk_win_64/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a
+LOAD c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m\libgcc.a
+LOAD c:/users/drago/downloads/drive-download-20250812t024751z-1-001/03- imt sdk/03- imt sdk/imt_sdk_win_64/winarm/armgcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a
 END GROUP
                 0x20010000                __stack = (ORIGIN (RAM) + LENGTH (RAM))
                 0x20010000                _estack = __stack
@@ -1474,7 +1474,7 @@ END GROUP
  .debug_frame   0x00000a9c       0x50 ./src/_initialize_hardware.o
  .debug_frame   0x00000aec       0x50 ./src/stm32f4xx_hal_msp.o
 
-.debug_str      0x00000000     0x2157
+.debug_str      0x00000000     0x217b
  *(.debug_str)
  .debug_str     0x00000000      0xcae ./system/src/stm32f4-hal/stm32f4xx_hal.o
                                 0xd3d (size before relaxing)
@@ -1498,21 +1498,21 @@ END GROUP
                                 0x78f (size before relaxing)
  .debug_str     0x0000180a       0x59 ./system/src/cmsis/vectors_stm32f401xc.o
                                 0x1f2 (size before relaxing)
- .debug_str     0x00001863      0x1c9 ./src/MCAL/SYSTICK/SYSTICK_prg.o
-                                0x357 (size before relaxing)
- .debug_str     0x00001a2c      0x368 ./src/MCAL/SPI/SPI_prg.o
-                                0x50a (size before relaxing)
- .debug_str     0x00001d94       0x6a ./src/MCAL/RCC/RCC_prg.o
+ .debug_str     0x00001863      0x1ed ./src/MCAL/SYSTICK/SYSTICK_prg.o
+                                0x33e (size before relaxing)
+ .debug_str     0x00001a50      0x368 ./src/MCAL/SPI/SPI_prg.o
+                                0x4f1 (size before relaxing)
+ .debug_str     0x00001db8       0x6a ./src/MCAL/RCC/RCC_prg.o
                                 0x2c8 (size before relaxing)
- .debug_str     0x00001dfe      0x1b1 ./src/MCAL/GPIO/GPIO_prg.o
+ .debug_str     0x00001e22      0x1b1 ./src/MCAL/GPIO/GPIO_prg.o
                                 0x34a (size before relaxing)
- .debug_str     0x00001faf      0x118 ./src/MCAL/EXTI/EXTI_prg.o
+ .debug_str     0x00001fd3      0x118 ./src/MCAL/EXTI/EXTI_prg.o
                                 0x2b9 (size before relaxing)
- .debug_str     0x000020c7       0x22 ./src/APP/main.o
-                                0x3dc (size before relaxing)
- .debug_str     0x000020e9       0x31 ./src/_initialize_hardware.o
+ .debug_str     0x000020eb       0x22 ./src/APP/main.o
+                                0x3c3 (size before relaxing)
+ .debug_str     0x0000210d       0x31 ./src/_initialize_hardware.o
                                 0x8ba (size before relaxing)
- .debug_str     0x0000211a       0x3d ./src/stm32f4xx_hal_msp.o
+ .debug_str     0x0000213e       0x3d ./src/stm32f4xx_hal_msp.o
                                 0x60b (size before relaxing)
 
 .debug_loc      0x00000000     0x163a
