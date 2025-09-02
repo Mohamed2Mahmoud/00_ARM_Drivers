@@ -9,44 +9,54 @@
 #include "UART_int.h"
 #include "UART_prv.h"
 
-void USART_vInit(void){
+//================= USART1 Functions =================//
 
-	CLR_BIT(USART1->CR1,OVER8);
+void USART1_vInit(void)
+{
+    // 1) Oversampling = 16
+    CLR_BIT(USART1->CR1, USART_OVER8);
 
-	CLR_BIT(USART1->CR1,12);
+    // 2) Word length = 8 bits
+    CLR_BIT(USART1->CR1, USART_M);
 
-	CLR_BIT(USART1->CR1,10);
+    // 3) Parity = None
+    CLR_BIT(USART1->CR1, USART_PCE);
 
-	USART1->BRR = 162<<4 | 13;
+    // 4) Baud rate
+    USART1->BRR = USART1_BRR_VALUE;
 
-	CLR_BIT(USART1->CR2,12);
+    // 5) Stop bits = 1
+    USART1->CR2 &= ~(0x3U << USART_STOP_BITS_POS);  // clear
+    USART1->CR2 |= USART_STOPBITS_1;
 
-	CLR_BIT(USART1->CR2,13);
+    // 6) Enable transmitter, receiver
+    SET_BIT(USART1->CR1, USART_TE);
+    SET_BIT(USART1->CR1, USART_RE);
 
-	SET_BIT(USART1->CR1,3);
-
-	SET_BIT(USART1->CR1,2);
-
-	SET_BIT(USART1->CR1,13);
-
+    // 7) Enable USART
+    SET_BIT(USART1->CR1, USART_UE);
 }
 
-void USART_vSendData(u8 A_u8Data){
+void USART1_vSendData(u8 A_u8Data)
+{
+    // Wait until TXE flag is set
+    while (!GET_BIT(USART1->SR, USART_TXE_FLAG));
 
-	while(!GET_BIT(USART1->SR,7));
+    // Load data into DR
+    USART1->DR = A_u8Data;
 
-	USART1->DR = A_u8Data;
+    // Wait until transmission complete (TC flag)
+    while (!GET_BIT(USART1->SR, USART_TC_FLAG));
 
-	while(!GET_BIT(USART1->SR,6));
-
-	CLR_BIT(USART1->SR,6);
+    // Clear TC flag (optional, some HALs do this automatically)
+    CLR_BIT(USART1->SR, USART_TC_FLAG);
 }
 
-u8 USART_u8ReiceiveData(){
-	while(!GET_BIT(USART1->SR,5));
+u8 USART1_u8ReceiveData(void)
+{
+    // Wait until RXNE flag is set
+    while (!GET_BIT(USART1->SR, USART_RXNE_FLAG));
 
-	return USART1->DR;
+    // Return received data
+    return (u8)USART1->DR;
 }
-
-
-
