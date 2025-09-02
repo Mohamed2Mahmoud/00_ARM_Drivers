@@ -30,5 +30,7 @@
 #include "../RTOS/scheduler/Scheduler_int.h"
 #include "../RTOS/scheduler/Scheduler_cfg.h"
 #include "../MCAL/UART/UART_int.h"
+#include "../MCAL/SPI/SPI_int.h"
+
 
 #endif /* APP_INCLUDES_INT_H_ */

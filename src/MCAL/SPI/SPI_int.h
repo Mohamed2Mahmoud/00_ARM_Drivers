@@ -53,22 +53,28 @@ typedef enum {
     SPI_INT_TXE,
     SPI_INT_ERR
 } MSPI_Interrupt_t;
-
+typedef enum{
+	SPI1=0,
+	SPI2,
+	SPI3,
+	SPI4,
+}MSPI_No_t;
 typedef struct {
-    MSPI_Mode_t Mode;
+	MSPI_No_t SPIx;
+	MSPI_Mode_t Mode;
     MSPI_BaudRate_t BaudRate;
     MSPI_ClockPolarity_t SPI_CPOL;
     MSPI_ClockPhase_t SPI_CPHA;
     MSPI_DataOrder_t DataOrder;
 } MSPI_Config_t;
 
-void MSPI_vInit(u8 A_u8SPIx, MSPI_Config_t *A_pxConfig);
+void MSPI_vInit(MSPI_Config_t *A_pxConfig);
 void MSPI_vEnable(u8 A_u8SPIx);
 void MSPI_vDisable(u8 A_u8SPIx);
 
 void MSPI_vSendData(u8 A_u8SPIx, u16 A_u16Data);
 u16  MSPI_u16ReceiveData(u8 A_u8SPIx);
-u16  MSPI_u16Transceive(u8 A_u8SPIx, u16 A_u16Data);
+u8  MSPI_u8Transceive(MSPI_Config_t *A_pxConfig, u8 A_u16Data);
 
 void MSPI_vEnableInterrupt(u8 A_u8SPIx, MSPI_Interrupt_t A_IntType);
 void MSPI_vDisableInterrupt(u8 A_u8SPIx, MSPI_Interrupt_t A_IntType);

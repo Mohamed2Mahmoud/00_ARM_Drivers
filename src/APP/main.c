@@ -1,48 +1,66 @@
 #include "Includes_int.h"
 
 
-/*GPIOx_PinConfig_t tx = {
-		.port = GPIO_PORTA,
-		.pin = PIN9,
-		.mode = GPIO_MODE_ALTFUNC,
-		.altFunc = GPIO_AF7_USART1_USART2
-};
-
-GPIOx_PinConfig_t rx = {
-		.port = GPIO_PORTA,
-		.pin = PIN10,
-		.mode = GPIO_MODE_ALTFUNC,
-		.altFunc = GPIO_AF7_USART1_USART2
-};
-
-GPIOx_PinConfig_t led = {
-		.port = GPIO_PORTA,
-		.pin = PIN1,
-		.mode = GPIO_MODE_OUTPUT,
-		.speed = GPIO_LOW_SPEED,
-		.outputType = GPIO_PUSHPULL,
-		.pull = GPIO_PULLDOWN
-};
 
 
 
 int main(void){
 	MRCC_vInit();
 	MRCC_vEnableClk(RCC_AHB1,RCC_GPIOA);
-	MRCC_vEnableClk(RCC_APB2,RCC_USART1);
-	USART_vInit();
-	MGPIO_vPinInit(&tx);
-	MGPIO_vPinInit(&rx);
+	MRCC_vEnableClk(RCC_APB2,12);
+
+	GPIOx_PinConfig_t MISO = {
+			.port = GPIO_PORTA,
+			.pin = PIN6,
+			.mode = GPIO_MODE_ALTFUNC,
+			.altFunc = GPIO_AF5_SPI1_SPI2
+	};
+
+	GPIOx_PinConfig_t MOSI = {
+			.port = GPIO_PORTA,
+			.pin = PIN7,
+			.mode = GPIO_MODE_ALTFUNC,
+			.altFunc = GPIO_AF5_SPI1_SPI2
+	};
+	GPIOx_PinConfig_t SCK = {
+			.port = GPIO_PORTA,
+			.pin = PIN5,
+			.mode = GPIO_MODE_ALTFUNC,
+			.altFunc = GPIO_AF5_SPI1_SPI2
+	};
+
+	GPIOx_PinConfig_t led = {
+			.port = GPIO_PORTA,
+			.pin = PIN1,
+			.mode = GPIO_MODE_OUTPUT,
+			.speed = GPIO_LOW_SPEED,
+			.outputType = GPIO_PUSHPULL,
+			.pull = GPIO_PULLDOWN
+	};
+
+	MSPI_Config_t SPI1x = {
+			.SPIx = SPI1
+	};
+
+
+	MSPI_vInit(&SPI1x);
+
+	MGPIO_vPinInit(&MISO);
+	MGPIO_vPinInit(&MOSI);
+	MGPIO_vPinInit(&SCK);
 	MGPIO_vPinInit(&led);
 
 
-	USART_vSendData('A');
 
 
+	u16 data = 0;
 
-	if(USART_u8ReiceiveData()=='A'){
-		MGPIO_vSetPinValue(GPIO_PORTA,PIN1,GPIO_HIGH);
+	data = MSPI_u8Transceive(&SPI1x, 'n');
+	if(data ==	'n'){
+		MGPIO_vSetPinValue(GPIO_PORTA,PIN1,1);
 	}
+
+
 
 	while(1){
 
@@ -50,8 +68,8 @@ int main(void){
   return 0;
 }
 
-*/
 
+/*
 volatile u8 currentNum = 0;
 
 Segment_Init_t SEG1 = {
@@ -113,7 +131,7 @@ int main(void)
 }
 
 
-
+*/
 
 
 

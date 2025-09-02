@@ -9,7 +9,6 @@
 #include "UART_int.h"
 #include "UART_prv.h"
 
-//================= USART1 Functions =================//
 
 void USART1_vInit(void)
 {
